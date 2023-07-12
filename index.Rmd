@@ -17,6 +17,6 @@ github-repo: rstudio/bookdown-demo
 
 # Preface {.unnumbered}
 
-In this portfolio, you will find case studies covering the area of Data Science.
+Fazer
 
 # Sobre os Autores {#author .unnumbered}
