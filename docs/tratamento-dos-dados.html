@@ -95,7 +95,7 @@ set in the _output.yml file.</p>" />
 <li class="chapter" data-level="3" data-path="tratamento-dos-dados.html"><a href="tratamento-dos-dados.html"><i class="fa fa-check"></i><b>3</b> Tratamento dos Dados</a></li>
 <li class="chapter" data-level="4" data-path="o-que-define-um-jogador-bom.html"><a href="o-que-define-um-jogador-bom.html"><i class="fa fa-check"></i><b>4</b> O que define um jogador bom?</a></li>
 <li class="chapter" data-level="5" data-path="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html"><a href="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html"><i class="fa fa-check"></i><b>5</b> Evolução do jogo ao longo dos tempos e temporadas.</a></li>
-<li class="chapter" data-level="6" data-path="principais-estatística-do-jogo.html"><a href="principais-estatística-do-jogo.html"><i class="fa fa-check"></i><b>6</b> Principais estatística do jogo</a></li>
+<li class="chapter" data-level="6" data-path="entendimento-das-principais-estatística-do-jogo.html"><a href="entendimento-das-principais-estatística-do-jogo.html"><i class="fa fa-check"></i><b>6</b> Entendimento das principais estatística do jogo</a></li>
 <li class="chapter" data-level="7" data-path="o-que-define-um-time-bom.html"><a href="o-que-define-um-time-bom.html"><i class="fa fa-check"></i><b>7</b> O que define um time bom?</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="o-que-define-um-time-bom.html"><a href="o-que-define-um-time-bom.html#chernoff-faces"><i class="fa fa-check"></i><b>7.1</b> Chernoff Faces</a></li>
@@ -123,8 +123,7 @@ set in the _output.yml file.</p>" />
             <section class="normal" id="section-">
 <div id="tratamento-dos-dados" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Tratamento dos Dados<a href="tratamento-dos-dados.html#tratamento-dos-dados" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Para analisar os perfis de usuário da NBA, Pandas será usados para carregar o conjunto de dados em um DataFrame para que possa ser explorado e visualizado com Python.</p>
-<p>Existem algum valores vazios o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset existem esse tipo de dados.</p>
+<p>Verificou-se que existem alguns valores vazios, o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset possuem esse tipo de dado.</p>
 <p><img src="imagens/1.png" /></p>
 <p>O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG %, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.</p>
 <p>Para manter a consistência e garantir a confiabilidade da análise, optou-se por filtrar o DataFrame, excluindo as temporadas anteriores a 1978. Dessa forma, as colunas mencionadas estarão preenchidas a partir desse ano, permitindo uma análise mais completa e precisa das estatísticas dos jogadores da NBA.</p>

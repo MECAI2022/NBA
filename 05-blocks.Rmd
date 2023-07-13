@@ -1,10 +1,18 @@
-# Principais estatística do jogo
+# Entendimento das principais estatística do jogo
 
-Um maneira simples para entender melhor como um jogo de basquete funciona e como são os jogadores é avaliar as distribuições dos principais atributos. Quando os atributos são de características como, marcou mais pontos, arremesou mais, ou mais roubadas de bola, todos apresentam um formato exponencial, indicando que a tendência é que ao aumentar a frequência deles, uma menor quantidade de jogadores conseguem tal marca.
+Ao avaliar o Radviz aberto por ano e temporada (regular e playoffs), é possível chegar a algumas conclusões:
 
-Além disso, é possível interpretar da forma que essa curva decai. Ao comparar arremessos de três frente a arremessos de dois pontos, a curva de três apresenta uma queda muito mais acentuada, indicando que é um atributo com menor frequência (ou de maior dificuldade). A mesma analogia pode ser aplicada para rebotes ofensivos e defensivos, sendo o primeiro muito menos frequente.
+* Na década de 80/90, os arremessos de três pontos eram menos frequentes, e isso pode ser observado pela menor variação nos dados relacionados a essas estatísticas. As âncoras 3-pt FG%, 3Pt FG Attempts e 3-pt FG Made não apresentam uma tendência clara. No entanto, nas décadas seguintes, há uma dispersão maior dos dados nessas âncoras, indicando uma maior importância e frequência dos arremessos de três pontos.
 
-Por fim, os atributos de percentual de acerto de três pontos ou lances livres se assemelham a uma normal, indicando a característica do percentual de acerto de cada jogador. Importante destacar que a média de acertos em cestas de três é em torno de 35%, enquanto de lances livres é de 80%, evidenciando a maior dificuldade no acerto em cestas de três.
+* Os dados são mais dispersos na temporada regular do que nos playoffs, tornando mais difícil uma separação clara entre os jogadores mais bem ranqueados, especialmente nos top 150.
+
+* Nos playoffs, a dispersão dos dados é menor, permitindo uma melhor separação dos top 20 jogadores. É importante notar que alguns extremos podem ser encontrados entre os jogadores até o top 150, o que não ocorre na temporada regular.
+
+* Os top 20 jogadores da NBA, independentemente do ano ou da temporada, apresentam uma característica consistente: eles são constantes em todos os indicadores, sem apresentar extremos significativos.
+
+Um exemplo disso é Stephen Curry, que é conhecido por seus arremessos de três pontos e sempre possui um alto ranking. No entanto, ele se mantém próximo ao centro no Radviz, indicando que ele também é bem avaliado em outros aspectos do jogo.
+
+Essas observações mostram que a consistência e o desempenho equilibrado em várias estatísticas são características importantes para os jogadores de destaque na NBA.
 
 ![](imagens/15.png)
 

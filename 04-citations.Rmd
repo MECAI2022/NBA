@@ -1,46 +1,49 @@
 # O que define um jogador bom?
 
-Para simplificação vamos utilizar o rank apresentado no dataset, que seriam os jogadores ordenados de acordo com a pontuação por temporada.
+Para simplificação, será utilizado o rank apresentado no dataset, que representa a ordenação dos jogadores de acordo com a pontuação por temporada.
 
-Apesar dessa rank não levar em consideração fatores defensivos, será feito uma avaliaçào se os maiores "cestinhas" também apresentam características defensivas acima da média.
+Apesar desse rank não levar em consideração fatores defensivos, será feita uma avaliação para verificar se os maiores "cestinhas" também apresentam características defensivas acima da média.
 
-A primeiro momento vamos avaliar como as informações estatísticas de cada jogador por temporada varia e como está relacionado com o rank. Para tanto será utiizado a técnica do PCA para entender melhor esse comportamento.
+Em um primeiro momento, será avaliado como as informações estatísticas de cada jogador por temporada variam e como estão relacionadas com o rank. Para isso, será utilizada a técnica do PCA para entender melhor esse comportamento.
 
-Para definir o número de componentes ideal foi availiada a variância explicada por cada componente e adotada a regra do cotovelo.
+Para definir o número ideal de componentes, avaliou-se a variância explicada por cada componente e utilizou-se a regra do cotovelo.
 
-Pelo gráfico abaixo a partir da segunda componente já é explicada quase toda variância, sendo duas componentes suficiente para ter uma descrição dos dados, além de uma maior facilidade de interpretação visual dos dados.
+Observando o gráfico abaixo, pode-se notar que a partir da segunda componente, quase toda a variância é explicada. Portanto, duas componentes são suficientes para descrever os dados, além de facilitar a interpretação visual dos mesmos.
 
 ![](imagens/3.png)
 
-Na primeira análise do PCA é possível notar que as variáveis conseguem separar os jogadores mais bem ranqueados. Além disso, esse ranque pode seguir por três caminhos, todos com a variável eficiência sendo a principal, mas um mais voltado para cestas de dois, outros de três e por fim um voltado rebotes e bloqueios. Esse último principalmente para jogadores na função de pivôs e alas-pivôs.
+Na primeira análise do PCA, é possível observar que as variáveis são capazes de separar os jogadores com melhor ranking. Além disso, o ranking pode seguir três caminhos distintos, todos com a variável "eficiência" como a principal, mas com um foco maior em cestas de dois pontos, outro em cestas de três pontos, e por fim, um focado em rebotes e bloqueios. Esse último é especialmente relevante para jogadores nas posições de pivô e ala-pivô.
 
-Além disso, é possível notar que existem muitas variáveis correlacionadas, para futuras análises serão retiradas as que tiverem maior correlação e menor peso no PCA.
+Além disso, nota-se a presença de muitas variáveis correlacionadas. Para análises futuras, serão removidas as variáveis com maior correlação e menor peso no PCA.
 
 ![](imagens/4.png)
 
 ![](imagens/5.png)
 
-A matriz de correlação gerada mostra os coeficientes de correlação entre diferentes variáveis. Os valores na matriz variam de -1 a 1 e indicam a força e direção do relacionamento entre as variáveis.
+A matriz de correlação gerada apresenta os coeficientes de correlação entre diferentes variáveis. Os valores na matriz variam de -1 a 1 e indicam a força e direção do relacionamento entre as variáveis.
 
-Aqui estão algumas observações a partir da matriz de correlação:
+Aqui estão algumas observações com base na matriz de correlação:
 
-Há uma forte correlação positiva entre "Games Played" e diversas outras variáveis como "Minutes Played", "FG Made", "FG Attempts", "FT Made" e "FT Attempts". Isso faz sentido, pois jogadores que jogam mais partidas tendem a acumular mais minutos e ter mais tentativas e sucessos em arremessos de quadra e lances livres.
+* Há uma correlação positiva forte entre "Games Played" e várias outras variáveis, como "Minutes Played", "FG Made", "FG Attempts", "FT Made" e "FT Attempts". Isso faz sentido, uma vez que jogadores que disputam mais partidas tendem a acumular mais minutos de jogo e ter mais tentativas e acertos em arremessos de quadra e lances livres.
 
-Existe uma forte correlação positiva entre "Offensive Rebounds" e "Defensive Rebounds", o que é esperado, já que ambos contribuem para o número total de rebotes.
+* Existe uma correlação positiva forte entre "Offensive Rebounds" e "Defensive Rebounds", o que é esperado, já que ambos contribuem para o número total de rebotes.
 
-Há uma forte correlação positiva entre "Points Scored" e diversas outras variáveis como "FG Made", "FT Made" e "Minutes Played". Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e atuam por mais minutos.
+* Há uma correlação positiva forte entre "Points Scored" e várias outras variáveis, como "FG Made", "FT Made" e "Minutes Played". Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e jogar por mais minutos.
 
-Após a redução de dimensionalidade é possível notar que ainda as estatísticas apresentam uma separação razoável na determinação do rank dos jogadores. Aliás, os maiores ranques são pontos bem distante do centroide. Na figura abaixo foi destacado os top 5 jogadores de cada temporada, além de trazer um exemplo para três jogadres: Lebron James, Shaquille O'Neal e Stephen Curry.
+Após a redução da dimensionalidade, é possível observar que as estatísticas ainda apresentam uma separação razoável na determinação do ranking dos jogadores. Além disso, os jogadores com os maiores rankings estão bem distantes do centróide.
 
-Interessante na avaliação dos três como o Curry se destaca pelas cestas dos três, O'Neal pela presença no garrafão, com elevado número de rebotes e o Lebron com uma das maiores eficiências já vistas na história da NBA.
+Na figura abaixo, destacamos os cinco melhores jogadores de cada temporada, além de apresentar um exemplo para três jogadores: LeBron James, Shaquille O'Neal e Stephen Curry.
 
-Em resumo, para definição de um jogador bom é necessário uma maior eficiência como um todo, sendo que essa pode desviar de acordo com a posição e característica dos jogadores, seja sendo um armador com facilidade em cestas de 3 (Curry), um ala-pivô com característica mais equilibradas (Lebron) ou um pivô com uma presença no garrafão (O'Neal).
+É interessante notar que, na avaliação desses três jogadores, Curry se destaca pelas cestas de três pontos, O'Neal pela presença no garrafão, com um elevado número de rebotes, e LeBron com uma das maiores eficiências já vistas na história da NBA.
 
-Por fim, mesmo o ranque utilizado ser de acordo com a pontuação, nota-se que os mais bem ranqueados nesse quesito não se destacam apenas por essa característica.
+Em resumo, para se definir um jogador bom, é necessário ter uma maior eficiência de maneira geral, sendo que essa eficiência pode variar de acordo com a posição e características dos jogadores. Por exemplo, um armador como Curry tem facilidade em fazer cestas de três pontos, enquanto um ala-pivô como LeBron possui características mais equilibradas e O'Neal, como pivô, se destaca pela presença no garrafão.
+
+Por fim, mesmo que o ranking utilizado seja baseado na pontuação, nota-se que os jogadores mais bem ranqueados não se destacam apenas por essa característica.
 
 ![](imagens/6.png)
 
-Para corroborar com a avaliação do PCA foi utilizada uma outra técnica a fim de verificar o poder de separação dos atributos da base, as Curvas de Andrews. Elas são úteis porque permitem identificar quais variáveis têm um maior impacto na separação dos grupos, ajudando a entender a importância relativa de cada característica. Além disso, elas também podem ser usadas para detectar a presença de outliers ou padrões incomuns nos dados.
+Para corroborar com a avaliação do PCA foi utilizada uma outra técnica a fim de verificar o poder de separação dos atributos da base, as Curvas de Andrews.
+Elas são úteis porque permitem identificar quais variáveis têm um maior impacto na separação dos grupos, ajudando a entender a importância relativa de cada característica. Além disso, elas também podem ser usadas para detectar a presença de outliers ou padrões incomuns nos dados.
 
 As Curvas de Andrews são construídas utilizando a série de Fourier para transformar as variáveis originais em uma combinação de funções seno e cosseno. A série de Fourier é uma representação matemática de uma função periódica como uma soma infinita de funções seno e cosseno com diferentes frequências.
 
@@ -58,28 +61,32 @@ Essa abordagem permite representar as variáveis em termos de frequências harm�
 
 A interpretação das Curvas de Andrews é baseada na análise da forma das curvas e na distância entre elas. Se as curvas de diferentes grupos estão próximas umas das outras, isso indica que as variáveis têm um poder de separação menor. Por outro lado, se as curvas estão bem separadas, isso sugere que as variáveis têm um alto poder de separação entre os grupos.
 
-Quando é observada a curva, é possível notar que as variáveis selecionaas no PCA apresentam uma boa separação entre os grupos top 20,top 21-70, 71-150 e maior que 150, indicando que esses atributos separam bem não somente os melhores jogadores, como destacados no PCA, mas também entre jogadores menos bem ranqueados.
+Quando é observada a curva, é possível notar que as variáveis selecionadas no PCA apresentam uma boa separação entre os grupos top 20,top 21-70, 71-150 e maior que 150, indicando que esses atributos separam bem não somente os melhores jogadores, como destacados no PCA, mas também entre jogadores menos bem ranqueados.
 
 ![](imagens/7.png)
 
-Por fim a última avaliação para os jogadores foi utilizando a técnica Radviz. Ele é um método de visualização utilizado para representar dados multivariados. Ele consiste em um gráfico circular no qual os pontos de dados são dispostos em torno de um círculo, sendo a posição de cada ponto determinada pelas suas variáveis. Cada variável é representada por um eixo radial, e a localização do ponto no gráfico indica a contribuição relativa de cada variável para o ponto de dados. Dessa forma, o Radviz permite identificar padrões e relacionamentos entre as variáveis de forma intuitiva e compacta.
+Por fim, a última avaliação dos jogadores foi realizada utilizando a técnica Radviz. Essa técnica é utilizada para visualizar dados multivariados. Consiste em um gráfico circular no qual os pontos de dados são dispostos ao redor de um círculo, sendo a posição de cada ponto determinada pelas suas variáveis. Cada variável é representada por um eixo radial, e a localização do ponto no gráfico indica a contribuição relativa de cada variável para o ponto de dados. Dessa forma, o Radviz permite identificar padrões e relacionamentos entre as variáveis de maneira intuitiva e compacta.
 
-Para o caso da NBA, uma propriedade interessante é quando um jogador se destaque em vários atributos, ele ficará mais ao centro do círculo, enquanto jogadores que se destacam mais por algum atributo específico tenderam a essa âncora.
+No caso da NBA, uma propriedade interessante é quando um jogador se destaca em vários atributos, ele ficará mais próximo do centro do círculo, enquanto jogadores que se destacam mais em um atributo específico tenderão a se afastar do centro.
 
-Quando é observado os top 20 jogadores, é possível notar que estão mais concentrados ao centro, indicando que seus atributos não se limitam a uma habilidade específica, mas a apresentar um resultado razoável em todos os atributos. Além disso, conforme o ranque vai aumentando, os pontos vão ficando mais dispersos ao longo do círculo, indicando algum valor mais extremo.
+Ao observar os top 20 jogadores, é possível notar que eles estão mais concentrados ao centro, indicando que seus atributos não se limitam a uma habilidade específica, mas apresentam resultados razoáveis em todos os atributos. Além disso, à medida que o ranking aumenta, os pontos se dispersam ao longo do círculo, indicando a presença de valores mais extremos.
 
-Em resumo pelo Radviz, pode-se concluir que para ser bom na NBA não basta ser o cestinha, mas se destacar de maneira considerável em outros quesitos, como defesa, rebotes, variação de arremesos e assistências.
-
-![](imagens/download.png)
+Em resumo, de acordo com o Radviz, pode-se concluir que para ser considerado um bom jogador na NBA, não basta ser o principal pontuador, mas é necessário se destacar de maneira considerável em outros aspectos, como defesa, rebotes, variedade de arremessos e assistências.
 
 # Evolução do jogo ao longo dos tempos e temporadas.
 
-Ao avaliar o Radviz aberto por ano e temporada (regular e playoffs), é possível obter algumas conclusões:
+Ao avaliar o Radviz aberto por ano e temporada (regular e playoffs), é possível chegar a algumas conclusões:
 
--   Na década de 80/90 os chutes de 3 eram menos frequentes. A variação desses dados é bem menor nesse período. É possível verificar essa análise ao avaliar as âncoras 3-pt FG%, 3Pt FG Attempts e 3-pt FG Made, os quais não apresentam quase nenhum indicador tendendo a eles. Diferentemente das próximas décadas em que há uma dispersão bem maior tendendo a essas âncoras.
--   As informações são bem mais dispersas na temporada regular que nos playoffs, logo é mais difícil ter uma separação entre os jogares mais bem ranqueados, principalmente nos top 150.
--   Nos playoffs a dispersão dos dados é menor, sendo possível obter uma melhor separação para os top 20 jogadores. Importante notar que alguns extremos são jogadores até top 150, fato que não acontece na temporada regular.
--   Os top 20 jogadores da NBA, independente do ano ou da temporada sempre apresentam uma característica bem definida: são constante em todos indicadores, sem apresentar extremos.
--   Um exemplo disso é o Stephen Curry, muito conhecido pelos arremessos de 3 pontos, sempre bem ranqueado, porém se mantém próximo ao centro, uma vez que também é bem avaliado nos outros quesitos.
+* Na década de 80/90, os arremessos de três pontos eram menos frequentes, e isso pode ser observado pela menor variação nos dados relacionados a essas estatísticas. As âncoras 3-pt FG%, 3Pt FG Attempts e 3-pt FG Made não apresentam uma tendência clara. No entanto, nas décadas seguintes, há uma dispersão maior dos dados nessas âncoras, indicando uma maior importância e frequência dos arremessos de três pontos.
+
+* Os dados são mais dispersos na temporada regular do que nos playoffs, tornando mais difícil uma separação clara entre os jogadores mais bem ranqueados, especialmente nos top 150.
+
+* Nos playoffs, a dispersão dos dados é menor, permitindo uma melhor separação dos top 20 jogadores. É importante notar que alguns extremos podem ser encontrados entre os jogadores até o top 150, o que não ocorre na temporada regular.
+
+* Os top 20 jogadores da NBA, independentemente do ano ou da temporada, apresentam uma característica consistente: eles são constantes em todos os indicadores, sem apresentar extremos significativos.
+
+Um exemplo disso é Stephen Curry, que é conhecido por seus arremessos de três pontos e sempre possui um alto ranking. No entanto, ele se mantém próximo ao centro no Radviz, indicando que ele também é bem avaliado em outros aspectos do jogo.
+
+Essas observações mostram que a consistência e o desempenho equilibrado em várias estatísticas são características importantes para os jogadores de destaque na NBA.
 
 ![](imagens/14.png)
