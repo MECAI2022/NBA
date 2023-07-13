@@ -1,29 +1,39 @@
 # O que define um jogador bom ?
 
-\
-Para simplificação vamos utilizar o rank apresentado no dataset, que seriam os jogadores ordenados de acordo com a pontuação por temporada.\
-Apesar dessa rank não levar em consideração fatores defensivos, será feito uma avaliaçào se os maiores "cestinhas" também apresentam características defensivas acima da média.\
+Para simplificação vamos utilizar o rank apresentado no dataset, que seriam os jogadores ordenados de acordo com a pontuação por temporada.
+
+Apesar dessa rank não levar em consideração fatores defensivos, será feito uma avaliaçào se os maiores "cestinhas" também apresentam características defensivas acima da média.
+
 A primeiro momento vamos avaliar como as informações estatísticas de cada jogador por temporada varia e como está relacionado com o rank. Para tanto será utiizado a técnica do PCA para entender melhor esse comportamento.
 
-Para definir o número de componentes ideal foi availiada a variância explicada por cada componente e adotada a regra do cotovelo.\
+Para definir o número de componentes ideal foi availiada a variância explicada por cada componente e adotada a regra do cotovelo.
+
 Pelo gráfico abaixo a partir da segunda componente já é explicada quase toda variância, sendo duas componentes suficiente para ter uma descrição dos dados, além de uma maior facilidade de interpretação visual dos dados.
 
-![](imagens/3.png) Na primeira análise do PCA é possível notar que as variáveis conseguem separar os jogadores mais bem ranqueados. Além disso, esse ranque pode seguir por três caminhos, todos com a variável eficiência sendo a principal, mas um mais voltado para cestas de dois, outros de três e por fim um voltado rebotes e bloqueios. Esse último principalmente para jogadores na função de pivôs e alas-pivôs.\
+![](imagens/3.png) Na primeira análise do PCA é possível notar que as variáveis conseguem separar os jogadores mais bem ranqueados. Além disso, esse ranque pode seguir por três caminhos, todos com a variável eficiência sendo a principal, mas um mais voltado para cestas de dois, outros de três e por fim um voltado rebotes e bloqueios. Esse último principalmente para jogadores na função de pivôs e alas-pivôs.
+
 Além disso, é possível notar que existem muitas variáveis correlacionadas, para futuras análises serão retiradas as que tiverem maior correlação e menor peso no PCA.
 
 ![](imagens/4.png)
 
 ![](imagens/5.png)
 
-A matriz de correlação gerada mostra os coeficientes de correlação entre diferentes variáveis. Os valores na matriz variam de -1 a 1 e indicam a força e direção do relacionamento entre as variáveis.\
-Aqui estão algumas observações a partir da matriz de correlação:\
-Há uma forte correlação positiva entre "Games Played" e diversas outras variáveis como "Minutes Played", "FG Made", "FG Attempts", "FT Made" e "FT Attempts". Isso faz sentido, pois jogadores que jogam mais partidas tendem a acumular mais minutos e ter mais tentativas e sucessos em arremessos de quadra e lances livres.\
-Existe uma forte correlação positiva entre "Offensive Rebounds" e "Defensive Rebounds", o que é esperado, já que ambos contribuem para o número total de rebotes.\
+A matriz de correlação gerada mostra os coeficientes de correlação entre diferentes variáveis. Os valores na matriz variam de -1 a 1 e indicam a força e direção do relacionamento entre as variáveis.
+
+Aqui estão algumas observações a partir da matriz de correlação:
+
+Há uma forte correlação positiva entre "Games Played" e diversas outras variáveis como "Minutes Played", "FG Made", "FG Attempts", "FT Made" e "FT Attempts". Isso faz sentido, pois jogadores que jogam mais partidas tendem a acumular mais minutos e ter mais tentativas e sucessos em arremessos de quadra e lances livres.
+
+Existe uma forte correlação positiva entre "Offensive Rebounds" e "Defensive Rebounds", o que é esperado, já que ambos contribuem para o número total de rebotes.
+
 Há uma forte correlação positiva entre "Points Scored" e diversas outras variáveis como "FG Made", "FT Made" e "Minutes Played".  Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e atuam por mais minutos.
 
-Após a redução de dimensionalidade é possível notar que ainda as estatísticas apresentam uma separação razoável na determinação do rank dos jogadores. Aliás, os maiores ranques são pontos bem distante do centroide. Na figura abaixo foi destacado os top 5 jogadores de cada temporada, além de trazer um exemplo para três jogadres: Lebron James, Shaquille O'Neal e Stephen Curry.\
-Interessante na avaliação dos três como o Curry se destaca pelas cestas dos três, O'Neal pela presença no garrafão, com elevado número de rebotes e o Lebron com uma das maiores eficiências já vistas na história da NBA.\
-Em resumo, para definição de um jogador bom é necessário uma maior eficiência como um todo, sendo que essa pode desviar de acordo com a posição e característica dos jogadores, seja sendo um armador com facilidade em cestas de 3 (Curry), um ala-pivô com característica mais equilibradas (Lebron) ou um pivô com uma presença no garrafão (O'Neal).\
+Após a redução de dimensionalidade é possível notar que ainda as estatísticas apresentam uma separação razoável na determinação do rank dos jogadores. Aliás, os maiores ranques são pontos bem distante do centroide. Na figura abaixo foi destacado os top 5 jogadores de cada temporada, além de trazer um exemplo para três jogadres: Lebron James, Shaquille O'Neal e Stephen Curry.
+
+Interessante na avaliação dos três como o Curry se destaca pelas cestas dos três, O'Neal pela presença no garrafão, com elevado número de rebotes e o Lebron com uma das maiores eficiências já vistas na história da NBA.
+
+Em resumo, para definição de um jogador bom é necessário uma maior eficiência como um todo, sendo que essa pode desviar de acordo com a posição e característica dos jogadores, seja sendo um armador com facilidade em cestas de 3 (Curry), um ala-pivô com característica mais equilibradas (Lebron) ou um pivô com uma presença no garrafão (O'Neal).
+
 Por fim, mesmo o ranque utilizado ser de acordo com a pontuação, nota-se que os mais bem ranqueados nesse quesito não se destacam apenas por essa característica.
 
 ![](imagens/6.png)
@@ -50,9 +60,12 @@ Quando é observada a curva, é possível notar que as variáveis selecionaas no
 
 ![](imagens/7.png)
 
-Por fim a última avaliação para os jogadores foi utilizando a técnica Radviz. Ele é um método de visualização utilizado para representar dados multivariados. Ele consiste em um gráfico circular no qual os pontos de dados são dispostos em torno de um círculo, sendo a posição de cada ponto determinada pelas suas variáveis. Cada variável é representada por um eixo radial, e a localização do ponto no gráfico indica a contribuição relativa de cada variável para o ponto de dados. Dessa forma, o Radviz permite identificar padrões e relacionamentos entre as variáveis de forma intuitiva e compacta.\
-Para o caso da NBA, uma propriedade interessante é quando um jogador se destaque em vários atributos, ele ficará mais ao centro do círculo, enquanto jogadores que se destacam mais por algum atributo específico tenderam a essa âncora.\
-Quando é observado os top 20 jogadores, é possível notar que estão mais concentrados ao centro, indicando que seus atributos não se limitam a uma habilidade específica, mas a apresentar um resultado razoável em todos os atributos. Além disso, conforme o ranque vai aumentando, os pontos vão ficando mais dispersos ao longo do círculo, indicando algum valor mais extremo.\
+Por fim a última avaliação para os jogadores foi utilizando a técnica Radviz. Ele é um método de visualização utilizado para representar dados multivariados. Ele consiste em um gráfico circular no qual os pontos de dados são dispostos em torno de um círculo, sendo a posição de cada ponto determinada pelas suas variáveis. Cada variável é representada por um eixo radial, e a localização do ponto no gráfico indica a contribuição relativa de cada variável para o ponto de dados. Dessa forma, o Radviz permite identificar padrões e relacionamentos entre as variáveis de forma intuitiva e compacta.
+
+Para o caso da NBA, uma propriedade interessante é quando um jogador se destaque em vários atributos, ele ficará mais ao centro do círculo, enquanto jogadores que se destacam mais por algum atributo específico tenderam a essa âncora.
+
+Quando é observado os top 20 jogadores, é possível notar que estão mais concentrados ao centro, indicando que seus atributos não se limitam a uma habilidade específica, mas a apresentar um resultado razoável em todos os atributos. Além disso, conforme o ranque vai aumentando, os pontos vão ficando mais dispersos ao longo do círculo, indicando algum valor mais extremo.
+
 Em resumo pelo Radviz, pode-se concluir que para ser bom na NBA não basta ser o cestinha, mas se destacar de maneira considerável em outros quesitos, como defesa, rebotes, variação de arremesos e assistências.
 
 ![](imagens/download.png)
