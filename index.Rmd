@@ -29,8 +29,8 @@ O estudo da visualização de informação aplicada à NBA não se restringe ape
 
 Agradeço a todos os professores e colegas do MECAI pelo apoio e incentivo ao longo desta jornada de aprendizado. Espero que este trabalho contribua para o avanço do conhecimento na área de visualização de informação e inspire pesquisas futuras no campo da análise de dados esportivos.
 
-Desejo a todos uma leitura proveitosa e enriquecedora.
-
 # Sobre os Autores {#author .unnumbered}
 
-FAZER
+**Gabriel Bortoli:** Formado em Ciência da Computação na UFSCar, atualmente trabalha na Kyndryl, em projetos internos de análise de dados e ciência de dados.
+
+**Wesley Maia:** Formado em Bacharelado em Física na USP com MBA em Data Science & Analytics pela USP, atualmente trabalha na Hand Talk como cientista de dados.

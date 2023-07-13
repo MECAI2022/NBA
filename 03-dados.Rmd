@@ -1,3 +1,4 @@
+<pre>
 # Tratamento dos Dados
 
 Para analisar os perfis de usuário da NBA, Pandas será usados para carregar o conjunto de dados em um DataFrame para que possa ser explorado e visualizado com Python.
@@ -13,3 +14,4 @@ Para manter a consistência e garantir a confiabilidade da análise, optou-se po
 Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.
 
 ![](imagens/2.png)
+</pre>
