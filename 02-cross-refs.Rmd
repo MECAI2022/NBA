@@ -2,14 +2,14 @@
 
 O projeto tem um conjunto de dados fornecido pelo Kaggle chamado nba.csv. NA base apresenta os dados dos jogadores de todas as temporadas de 1951 a 2022, com um total de 33330 ocorrências
 
-### Descrição da base
+## Descrição da base
 
 As colunas são descritas a seguir:
 
 POR JOGADOR:
 
 | Variável           | Descrição                                                                                                                                                                                        |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------|-----------------------------------------------------------|
 | Rank               | A classificação do jogador (ordenado por pontos marcados a cada temporada)                                                                                                                       |
 | Year               | O ano da temporada (por exemplo, "2018-19")                                                                                                                                                      |
 | Season Start Year  | O ano de início da temporada (por exemplo, 2018)                                                                                                                                                 |

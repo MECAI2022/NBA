@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Principais estatística do jogo | 3 Pontos Sobre NBA</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Principais estatística do jogo | 3 Pontos Sobre NBA" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Principais estatística do jogo | 3 Pontos Sobre NBA" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Angelo Carmignani, Gabriel Bortoli, Wesley Maia" />
+
+
+<meta name="date" content="2023-07-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html"/>
+<link rel="next" href="o-que-define-um-time-bom.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">NBA Análise</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="author.html"><a href="author.html"><i class="fa fa-check"></i>Sobre os Autores</a></li>
+<li class="chapter" data-level="1" data-path="introdução.html"><a href="introdução.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introdução.html"><a href="introdução.html#objetivo"><i class="fa fa-check"></i><b>1.1</b> Objetivo</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="dados.html"><a href="dados.html"><i class="fa fa-check"></i><b>2</b> Dados</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="dados.html"><a href="dados.html#descrição-da-base"><i class="fa fa-check"></i><b>2.1</b> Descrição da base</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploração-dos-dados-eda.html"><a href="exploração-dos-dados-eda.html"><i class="fa fa-check"></i><b>3</b> Exploração dos Dados (EDA)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploração-dos-dados-eda.html"><a href="exploração-dos-dados-eda.html#tratamento-dos-dados"><i class="fa fa-check"></i><b>3.1</b> Tratamento dos dados</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="o-que-define-um-jogador-bom.html"><a href="o-que-define-um-jogador-bom.html"><i class="fa fa-check"></i><b>4</b> O que define um jogador bom ?</a></li>
+<li class="chapter" data-level="5" data-path="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html"><a href="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html"><i class="fa fa-check"></i><b>5</b> Evolução do jogo ao longo dos tempos e temporadas.</a></li>
+<li class="chapter" data-level="6" data-path="principais-estatística-do-jogo.html"><a href="principais-estatística-do-jogo.html"><i class="fa fa-check"></i><b>6</b> Principais estatística do jogo</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="principais-estatística-do-jogo.html"><a href="principais-estatística-do-jogo.html#principais-pontuadores-de-todos-os-tempos"><i class="fa fa-check"></i><b>6.1</b> Principais pontuadores de todos os tempos</a></li>
+<li class="chapter" data-level="6.2" data-path="principais-estatística-do-jogo.html"><a href="principais-estatística-do-jogo.html#principais-garçons-de-todos-os-tempos"><i class="fa fa-check"></i><b>6.2</b> Principais “garçons” de todos os tempos</a></li>
+<li class="chapter" data-level="6.3" data-path="principais-estatística-do-jogo.html"><a href="principais-estatística-do-jogo.html#principais-bloqueadores-de-todos-os-tempos"><i class="fa fa-check"></i><b>6.3</b> Principais bloqueadores de todos os tempos</a></li>
+<li class="chapter" data-level="6.4" data-path="principais-estatística-do-jogo.html"><a href="principais-estatística-do-jogo.html#principais-pontuadores-dos-três-de-todos-os-tempos"><i class="fa fa-check"></i><b>6.4</b> Principais pontuadores dos três de todos os tempos</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="o-que-define-um-time-bom.html"><a href="o-que-define-um-time-bom.html"><i class="fa fa-check"></i><b>7</b> O que define um time bom?</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="o-que-define-um-time-bom.html"><a href="o-que-define-um-time-bom.html#chernoff-faces"><i class="fa fa-check"></i><b>7.1</b> Chernoff Faces</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">3 Pontos Sobre NBA</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="principais-estatística-do-jogo" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Principais estatística do jogo<a href="principais-estatística-do-jogo.html#principais-estatística-do-jogo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Um maneira simples para entender melhor como um jogo de basquete funciona e como são os jogadores é avaliar as distribuições dos principais atributos. Quando os atributos são de características como, marcou mais pontos, arremesou mais, ou mais roubadas de bola, todos apresentam um formato exponencial, indicando que a tendência é que ao aumentar a frequência deles, uma menor quantidade de jogadores conseguem tal marca.</p>
+<p>Além disso, é possível interpretar da forma que essa curva decai. Ao comparar arremessos de três frente a arremessos de dois pontos, a curva de três apresenta uma queda muito mais acentuada, indicando que é um atributo com menor frequência (ou de maior dificuldade). A mesma analogia pode ser aplicada para rebotes ofensivos e defensivos, sendo o primeiro muito menos frequente.</p>
+<p>Por fim, os atributos de percentual de acerto de três pontos ou lances livres se assemelham a uma normal, indicando a característica do percentual de acerto de cada jogador. Importante destacar que a média de acertos em cestas de três é em torno de 35%, enquanto de lances livres é de 80%, evidenciando a maior dificuldade no acerto em cestas de três.</p>
+<p><img src="imagens/15.png" /></p>
+<div id="principais-pontuadores-de-todos-os-tempos" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Principais pontuadores de todos os tempos<a href="principais-estatística-do-jogo.html#principais-pontuadores-de-todos-os-tempos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="imagens/16.png" /></p>
+</div>
+<div id="principais-garçons-de-todos-os-tempos" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Principais “garçons” de todos os tempos<a href="principais-estatística-do-jogo.html#principais-garçons-de-todos-os-tempos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="imagens/17.png" /></p>
+</div>
+<div id="principais-bloqueadores-de-todos-os-tempos" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Principais bloqueadores de todos os tempos<a href="principais-estatística-do-jogo.html#principais-bloqueadores-de-todos-os-tempos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="imagens/18.png" /></p>
+</div>
+<div id="principais-pontuadores-dos-três-de-todos-os-tempos" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Principais pontuadores dos três de todos os tempos<a href="principais-estatística-do-jogo.html#principais-pontuadores-dos-três-de-todos-os-tempos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="imagens/19.png" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="o-que-define-um-time-bom.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-blocks.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["NBA_Analise.pdf", "NBA_Analise.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

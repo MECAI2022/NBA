@@ -1,31 +1,57 @@
-# Sharing your book
+# O que define um time bom?
 
-## Publishing
+## Chernoff Faces
 
-HTML books can be published online, see: https://bookdown.org/yihui/bookdown/publishing.html
+Últimos campeões e vices da NBA:
 
-## 404 pages
+2013 - San Antonio Spurs \| Miami Heat
 
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a `_404.Rmd` or `_404.md` file to your project root and use code and/or Markdown syntax.
+2014 - Golden State **Warriors** \| Cleveland Cavaliers
 
-## Metadata for sharing
+2015 - Cleveland Cavaliers \| Golden State **Warriors**
 
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the `index.Rmd` YAML. To setup, set the `url` for your book and the path to your `cover-image` file. Your book's `title` and `description` are also used.
+2016 - Golden State **Warriors** \| Cleveland Cavaliers
 
+2017 - Golden State **Warriors** \| Cleveland Cavaliers
 
+2018 - Toronto Raptors \| Golden State **Warriors**
 
-This `gitbook` uses the same social sharing data across all chapters in your book- all links shared will look the same.
+2019 - Los Angeles Lakers \| Miami Heat
 
-Specify your book's source repository on GitHub using the `edit` key under the configuration options in the `_output.yml` file, which allows users to suggest an edit by linking to a chapter's source file. 
+2020 - Milwaukee Bucks \| Phoenix Suns
 
-Read more about the features of this output format here:
+2021 - Golden State **Warriors** \| Boston Celtics
 
-https://pkgs.rstudio.com/bookdown/reference/gitbook.html
+2022 - Denver Nuggets \| Miami Heat
 
-Or use:
+![](imagens/20.png) ![](imagens/21.jpeg) ![](imagens/22.jpeg) ![](imagens/23.png) Últimas posições na temporada regular do Golden State Warriors:
 
-```{r eval=FALSE}
-?bookdown::gitbook
-```
+2010 - 3º
 
+2011 - 4º
 
+2012 - 2º
+
+2013 - 2º
+
+2014 - 1º
+
+2015 - 1º
+
+2016 - 1º
+
+2017 - 1º
+
+2018 - 1º
+
+2019 - 5º
+
+2020 - 4º
+
+2021 - 2º
+
+2022 - 4º
+
+Concluindo, é possível observar tendencias de padrão e comportamento semelhantes em anos ou times que são parecidos, porém devido a natureza do gráfico e a falta de informação, principalmente para o "usuário" final, sobre os componentes representados por cada item (tamanho dos olhos, posição, inclinação da sobrancelha, etc.), não é possível fazer análises mais profundas.
+
+Vemos como um gráfico de apoio para facilitar algumas visualizações ou fomentar questionamentos, por exemplo: os gráficos de 2015 e 2017 são significativamente diferentes, apesar do time ter sido campeão em ambas as temporadas. O desempenho nesses anos foi muito diferente? Ou então, os Pacers (IND) e os Wizards (WAS) tiveram o mesmo aproveitamento na temporada (0.427), porém seus gráficos são distintos. O que será que aconteceu? Sabemos que o resultado final de um jogo é apenas vitória ou derrota, porém a margem de pontos pode ser de 1 ou de 20, bem como a quantidade de arremesos, roubadas de bola, entre outros. Um time pode ter tido um desempenho comparável a times pior classificados e ter tido "sorte" de ganhar a quantidade suficiente de jogos, mesmo que por uma margem pequena e perder por muito, enquanto outro sempre tinha jogos parelhos, porém perdeu em mais ocasiões.

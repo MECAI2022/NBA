@@ -1,6 +1,6 @@
 ---
-title: "A Minimal Book Example"
-author: "Angelo Carmignan, Gabriel Bortol, Wesley Maia"
+title: "3 Pontos Sobre NBA"
+author: "Angelo Carmignani, Gabriel Bortoli, Wesley Maia"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -15,8 +15,22 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-# Preface {.unnumbered}
+# Prefácio {.unnumbered}
 
-Fazer
+É com grande satisfação que apresento este trabalho de visualização de informação sobre dados da NBA, desenvolvido no âmbito da disciplina MAI5017 - Visualização de Informação, como parte integrante do Mestrado Profissional em Matemática, Estatística e Computação Aplicadas à Indústria (MECAI).
+
+A visualização de dados desempenha um papel crucial na análise e compreensão de conjuntos complexos de informações. No contexto do esporte, em particular, a visualização de dados tem se mostrado uma ferramenta poderosa para explorar e comunicar insights valiosos a partir de estatísticas e padrões relacionados aos jogos e aos jogadores de basquete.
+
+Este trabalho tem como objetivo principal explorar os dados da NBA e utilizar técnicas de visualização para revelar informações significativas e interessantes sobre as partidas, os jogadores, as equipes e as tendências ao longo do tempo. Para tanto, foram utilizadas ferramentas e técnicas de programação em Python, um ambiente amplamente adotado no campo da ciência de dados e análise estatística.
+
+A abordagem adotada neste trabalho segue o formato bookdown, uma estrutura que permite combinar narrativa, código e gráficos interativos de maneira integrada e coesa. Dessa forma, os resultados obtidos são apresentados de maneira clara e acessível, facilitando a compreensão e a exploração dos dados pelos leitores.
+
+O estudo da visualização de informação aplicada à NBA não se restringe apenas ao interesse acadêmico, mas também possui um potencial significativo na indústria esportiva, na tomada de decisões estratégicas e no desenvolvimento de estratégias competitivas. Por meio da visualização eficaz de dados, é possível identificar padrões ocultos, analisar desempenhos individuais e coletivos, e extrair insights relevantes para apoiar a tomada de decisões informadas.
+
+Agradeço a todos os professores e colegas do MECAI pelo apoio e incentivo ao longo desta jornada de aprendizado. Espero que este trabalho contribua para o avanço do conhecimento na área de visualização de informação e inspire pesquisas futuras no campo da análise de dados esportivos.
+
+Desejo a todos uma leitura proveitosa e enriquecedora.
 
 # Sobre os Autores {#author .unnumbered}
+
+FAZER
