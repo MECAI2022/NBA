@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 O que define um time bom? | 3 Pontos Sobre NBA</title>
+  <title>3 Exploração dos Dados | 3 Pontos Sobre NBA</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 O que define um time bom? | 3 Pontos Sobre NBA" />
+  <meta property="og:title" content="3 Exploração dos Dados | 3 Pontos Sobre NBA" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 O que define um time bom? | 3 Pontos Sobre NBA" />
+  <meta name="twitter:title" content="3 Exploração dos Dados | 3 Pontos Sobre NBA" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="principais-estatística-do-jogo.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="dados.html"/>
+<link rel="next" href="o-que-define-um-jogador-bom.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -130,37 +130,19 @@ set in the _output.yml file.</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="o-que-define-um-time-bom" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">7</span> O que define um time bom?<a href="o-que-define-um-time-bom.html#o-que-define-um-time-bom" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="chernoff-faces" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> Chernoff Faces<a href="o-que-define-um-time-bom.html#chernoff-faces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Últimos campeões e vices da NBA:</p>
-<p>2013 - San Antonio Spurs | Miami Heat</p>
-<p>2014 - Golden State <strong>Warriors</strong> | Cleveland Cavaliers</p>
-<p>2015 - Cleveland Cavaliers | Golden State <strong>Warriors</strong></p>
-<p>2016 - Golden State <strong>Warriors</strong> | Cleveland Cavaliers</p>
-<p>2017 - Golden State <strong>Warriors</strong> | Cleveland Cavaliers</p>
-<p>2018 - Toronto Raptors | Golden State <strong>Warriors</strong></p>
-<p>2019 - Los Angeles Lakers | Miami Heat</p>
-<p>2020 - Milwaukee Bucks | Phoenix Suns</p>
-<p>2021 - Golden State <strong>Warriors</strong> | Boston Celtics</p>
-<p>2022 - Denver Nuggets | Miami Heat</p>
-<p><img src="imagens/20.png" /> <img src="imagens/21.jpeg" /> <img src="imagens/22.jpeg" /> <img src="imagens/23.png" /> Últimas posições na temporada regular do Golden State Warriors:</p>
-<p>2010 - 3º</p>
-<p>2011 - 4º</p>
-<p>2012 - 2º</p>
-<p>2013 - 2º</p>
-<p>2014 - 1º</p>
-<p>2015 - 1º</p>
-<p>2016 - 1º</p>
-<p>2017 - 1º</p>
-<p>2018 - 1º</p>
-<p>2019 - 5º</p>
-<p>2020 - 4º</p>
-<p>2021 - 2º</p>
-<p>2022 - 4º</p>
-<p>Concluindo, é possível observar tendencias de padrão e comportamento semelhantes em anos ou times que são parecidos, porém devido a natureza do gráfico e a falta de informação, principalmente para o “usuário” final, sobre os componentes representados por cada item (tamanho dos olhos, posição, inclinação da sobrancelha, etc.), não é possível fazer análises mais profundas.</p>
-<p>Vemos como um gráfico de apoio para facilitar algumas visualizações ou fomentar questionamentos, por exemplo: os gráficos de 2015 e 2017 são significativamente diferentes, apesar do time ter sido campeão em ambas as temporadas. O desempenho nesses anos foi muito diferente? Ou então, os Pacers (IND) e os Wizards (WAS) tiveram o mesmo aproveitamento na temporada (0.427), porém seus gráficos são distintos. O que será que aconteceu? Sabemos que o resultado final de um jogo é apenas vitória ou derrota, porém a margem de pontos pode ser de 1 ou de 20, bem como a quantidade de arremesos, roubadas de bola, entre outros. Um time pode ter tido um desempenho comparável a times pior classificados e ter tido “sorte” de ganhar a quantidade suficiente de jogos, mesmo que por uma margem pequena e perder por muito, enquanto outro sempre tinha jogos parelhos, porém perdeu em mais ocasiões.</p>
+<div id="exploração-dos-dados" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Exploração dos Dados<a href="exploração-dos-dados.html#exploração-dos-dados" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Para analisar os perfis de usuário da NBA, Pandas será usados para carregar o conjunto de dados em um DataFrame para que possa ser explorado e visualizado com Python.</p>
+<p><img src="imagens/dataframe1.png" /></p>
+<p><img src="imagens/dataframe2.png" /></p>
+<div id="tratamento-dos-dados" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Tratamento dos dados<a href="exploração-dos-dados.html#tratamento-dos-dados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Vimos que existem algum valores vazios o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset existem esse tipo de dados.</p>
+<p><img src="imagens/1.png" /></p>
+<p>O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG %, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.</p>
+<p>Para manter a consistência e garantir a confiabilidade da análise, optou-se por filtrar o DataFrame, excluindo as temporadas anteriores a 1978. Dessa forma, as colunas mencionadas estarão preenchidas a partir desse ano, permitindo uma análise mais completa e precisa das estatísticas dos jogadores da NBA.</p>
+<p>Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.</p>
+<p><img src="imagens/2.png" /></p>
 
 </div>
 </div>
@@ -169,8 +151,8 @@ set in the _output.yml file.</p>" />
           </div>
         </div>
       </div>
-<a href="principais-estatística-do-jogo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="o-que-define-um-jogador-bom.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -201,7 +183,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-share.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-parts.Rmd",
 "text": "Edit"
 },
 "history": {

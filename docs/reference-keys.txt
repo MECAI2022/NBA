@@ -2,7 +2,7 @@ introdução
 objetivo
 dados
 descrição-da-base
-exploração-dos-dados-eda
+exploração-dos-dados
 tratamento-dos-dados
 o-que-define-um-jogador-bom
 evolução-do-jogo-ao-longo-dos-tempos-e-temporadas.
