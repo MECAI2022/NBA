@@ -2,6 +2,7 @@ introdução
 objetivo
 dados
 descrição-da-base
+tratamento-dos-dados
 o-que-define-um-jogador-bom
 evolução-do-jogo-ao-longo-dos-tempos-e-temporadas.
 principais-estatística-do-jogo

@@ -106,9 +106,11 @@ Agradeço a todos os professores e colegas do MECAI pelo apoio e incentivo ao lo
 \chapter*{Sobre os Autores}\label{author}}
 \addcontentsline{toc}{chapter}{Sobre os Autores}
 
+\textbf{Angelo Carmignani:} Formado em Engenharia Química na UFRGS, atualmente trabalha nas Lojas Quero-Quero S.A, como gerente de ciência de dados, mais aplicado ao desenvolvimento de modelos de machine learning para o varejo e crédito~e~risco.
+
 \textbf{Gabriel Bortoli:} Formado em Ciência da Computação na UFSCar, atualmente trabalha na Kyndryl, em projetos internos de análise de dados e ciência de dados.
 
-\textbf{Wesley Maia:} Formado em Bacharelado em Física na USP com MBA em Data Science \& Analytics pela USP, atualmente trabalha na Hand Talk como cientista de dados.
+\textbf{Wesley Maia:} Formado em Bacharelado em Física na USP com MBA em Data Science \& Analytics pela USP, atualmente trabalha na Hand Talk como cientista de dados com aplicações de modelo de redes neurais.
 
 \hypertarget{introduuxe7uxe3o}{%
 \chapter{Introdução}\label{introduuxe7uxe3o}}
@@ -180,6 +182,23 @@ AST/TOV & Taxa de assistências para turnovers (Assist-to-Turnover ratio) \\
 STL/TOV & Taxa de roubos de bola para turnovers (Steal-to-Turnover ratio) \\
 \bottomrule()
 \end{longtable}
+
+\hypertarget{tratamento-dos-dados}{%
+\chapter{Tratamento dos Dados}\label{tratamento-dos-dados}}
+
+Para analisar os perfis de usuário da NBA, Pandas será usados para carregar o conjunto de dados em um DataFrame para que possa ser explorado e visualizado com Python.
+
+Existem algum valores vazios o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset existem esse tipo de dados.
+
+\includegraphics{imagens/1.png}
+
+O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG \%, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.
+
+Para manter a consistência e garantir a confiabilidade da análise, optou-se por filtrar o DataFrame, excluindo as temporadas anteriores a 1978. Dessa forma, as colunas mencionadas estarão preenchidas a partir desse ano, permitindo uma análise mais completa e precisa das estatísticas dos jogadores da NBA.
+
+Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.
+
+\includegraphics{imagens/2.png}
 
 \hypertarget{o-que-define-um-jogador-bom}{%
 \chapter{O que define um jogador bom?}\label{o-que-define-um-jogador-bom}}
