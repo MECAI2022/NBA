@@ -137,8 +137,8 @@ As colunas são descritas a seguir:
 POR JOGADOR:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2222}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7778}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0935}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9065}}@{}}
 \toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
 Variável
@@ -189,6 +189,7 @@ Para analisar os perfis de usuário da NBA, Pandas será usados para carregar o 
 Existem algum valores vazios o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset existem esse tipo de dados.
 
 \includegraphics{imagens/1.png}
+
 O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG \%, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.
 
 Para manter a consistência e garantir a confiabilidade da análise, optou-se por filtrar o DataFrame, excluindo as temporadas anteriores a 1978. Dessa forma, as colunas mencionadas estarão preenchidas a partir desse ano, permitindo uma análise mais completa e precisa das estatísticas dos jogadores da NBA.
@@ -318,21 +319,21 @@ Por fim, os atributos de percentual de acerto de três pontos ou lances livres s
 
 2013 - San Antonio Spurs \textbar{} Miami Heat
 
-2014 - Golden State \textbf{Warriors} \textbar{} Cleveland Cavaliers
+2014 - Golden State Warriors \textbar{} Cleveland Cavaliers
 
-2015 - Cleveland Cavaliers \textbar{} Golden State \textbf{Warriors}
+2015 - Cleveland Cavaliers \textbar{} Golden State Warriors
 
-2016 - Golden State \textbf{Warriors} \textbar{} Cleveland Cavaliers
+2016 - Golden State Warriors \textbar{} Cleveland Cavaliers
 
-2017 - Golden State \textbf{Warriors} \textbar{} Cleveland Cavaliers
+2017 - Golden State Warriors \textbar{} Cleveland Cavaliers
 
-2018 - Toronto Raptors \textbar{} Golden State \textbf{Warriors}
+2018 - Toronto Raptors \textbar{} Golden State Warriors
 
 2019 - Los Angeles Lakers \textbar{} Miami Heat
 
 2020 - Milwaukee Bucks \textbar{} Phoenix Suns
 
-2021 - Golden State \textbf{Warriors} \textbar{} Boston Celtics
+2021 - Golden State Warriors \textbar{} Boston Celtics
 
 2022 - Denver Nuggets \textbar{} Miami Heat
 
