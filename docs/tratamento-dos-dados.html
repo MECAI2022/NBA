@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Evolução do jogo ao longo dos tempos e temporadas. | 3 Pontos Sobre NBA</title>
+  <title>3 Tratamento dos Dados | 3 Pontos Sobre NBA</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Evolução do jogo ao longo dos tempos e temporadas. | 3 Pontos Sobre NBA" />
+  <meta property="og:title" content="3 Tratamento dos Dados | 3 Pontos Sobre NBA" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Evolução do jogo ao longo dos tempos e temporadas. | 3 Pontos Sobre NBA" />
+  <meta name="twitter:title" content="3 Tratamento dos Dados | 3 Pontos Sobre NBA" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="o-que-define-um-jogador-bom.html"/>
-<link rel="next" href="principais-estatística-do-jogo.html"/>
+<link rel="prev" href="dados.html"/>
+<link rel="next" href="o-que-define-um-jogador-bom.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -121,17 +121,15 @@ set in the _output.yml file.</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas." class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Evolução do jogo ao longo dos tempos e temporadas.<a href="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html#evolução-do-jogo-ao-longo-dos-tempos-e-temporadas." class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Ao avaliar o Radviz aberto por ano e temporada (regular e playoffs), é possível obter algumas conclusões:</p>
-<ul>
-<li>Na década de 80/90 os chutes de 3 eram menos frequentes. A variação desses dados é bem menor nesse período. É possível verificar essa análise ao avaliar as âncoras 3-pt FG%, 3Pt FG Attempts e 3-pt FG Made, os quais não apresentam quase nenhum indicador tendendo a eles. Diferentemente das próximas décadas em que há uma dispersão bem maior tendendo a essas âncoras.</li>
-<li>As informações são bem mais dispersas na temporada regular que nos playoffs, logo é mais difícil ter uma separação entre os jogares mais bem ranqueados, principalmente nos top 150.</li>
-<li>Nos playoffs a dispersão dos dados é menor, sendo possível obter uma melhor separação para os top 20 jogadores. Importante notar que alguns extremos são jogadores até top 150, fato que não acontece na temporada regular.</li>
-<li>Os top 20 jogadores da NBA, independente do ano ou da temporada sempre apresentam uma característica bem definida: são constante em todos indicadores, sem apresentar extremos.</li>
-<li>Um exemplo disso é o Stephen Curry, muito conhecido pelos arremessos de 3 pontos, sempre bem ranqueado, porém se mantém próximo ao centro, uma vez que também é bem avaliado nos outros quesitos.</li>
-</ul>
-<p><img src="imagens/14.png" /></p>
+<div id="tratamento-dos-dados" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Tratamento dos Dados<a href="tratamento-dos-dados.html#tratamento-dos-dados" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Para analisar os perfis de usuário da NBA, Pandas será usados para carregar o conjunto de dados em um DataFrame para que possa ser explorado e visualizado com Python.</p>
+<p>Existem algum valores vazios o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset existem esse tipo de dados.</p>
+<p><img src="imagens/1.png" />
+O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG %, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.</p>
+<p>Para manter a consistência e garantir a confiabilidade da análise, optou-se por filtrar o DataFrame, excluindo as temporadas anteriores a 1978. Dessa forma, as colunas mencionadas estarão preenchidas a partir desse ano, permitindo uma análise mais completa e precisa das estatísticas dos jogadores da NBA.</p>
+<p>Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.</p>
+<p><img src="imagens/2.png" /></p>
 
 </div>
             </section>
@@ -139,8 +137,8 @@ set in the _output.yml file.</p>" />
           </div>
         </div>
       </div>
-<a href="o-que-define-um-jogador-bom.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="principais-estatística-do-jogo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="o-que-define-um-jogador-bom.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -171,7 +169,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-citations.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-parts.Rmd",
 "text": "Edit"
 },
 "history": {

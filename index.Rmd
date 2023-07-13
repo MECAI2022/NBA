@@ -17,7 +17,7 @@ github-repo: rstudio/bookdown-demo
 
 # Prefácio {.unnumbered}
 
-É com grande satisfação que apresento este trabalho de visualização de informação sobre dados da NBA, desenvolvido no âmbito da disciplina MAI5017 - Visualização de Informação, como parte integrante do Mestrado Profissional em Matemática, Estatística e Computação Aplicadas à Indústria (MECAI).
+É com grande satisfação que apresento este trabalho de visualização de informação sobre dados da NBA, desenvolvido no âmbito da disciplina MAI5017 - Visualização de Informação, como parte integrante do Mestrado Profissional em Matemática, Estatística e Computação Aplicadas à Indústria (MECAI) do Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo.
 
 A visualização de dados desempenha um papel crucial na análise e compreensão de conjuntos complexos de informações. No contexto do esporte, em particular, a visualização de dados tem se mostrado uma ferramenta poderosa para explorar e comunicar insights valiosos a partir de estatísticas e padrões relacionados aos jogos e aos jogadores de basquete.
 
