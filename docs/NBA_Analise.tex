@@ -61,6 +61,7 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\renewcommand{\chaptername}{Capítulo}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -125,10 +126,7 @@ Neste trabalho de Visualização de Dados, explora-se um conjunto abrangente de 
 
 O objetivo desta análise é investigar diversas facetas do basquete profissional, desde o desempenho das equipes até as estatísticas individuais dos jogadores. Por meio de técnicas de análise de dados e visualização, busca-se responder a perguntas como:
 
-Quais equipes dominaram a NBA ao longo dos anos?
-Quais jogadores tiveram as melhores performances estatísticas em diferentes épocas?
-Existem tendências ou padrões significativos nas estatísticas da NBA ao longo das décadas?
-Como o jogo evoluiu em termos de estilo de jogo, pontuação média e estilos de arremesso?
+Quais equipes dominaram a NBA ao longo dos anos? Quais jogadores tiveram as melhores performances estatísticas em diferentes épocas? Existem tendências ou padrões significativos nas estatísticas da NBA ao longo das décadas? Como o jogo evoluiu em termos de estilo de jogo, pontuação média e estilos de arremesso?
 
 Ao responder a essas perguntas, espera-se obter uma compreensão mais profunda da evolução da NBA e das dinâmicas que impulsionam o sucesso das equipes e dos jogadores ao longo do tempo. Esses insights não apenas fornecerão informações interessantes sobre a história da liga, mas também poderão ajudar a prever tendências futuras e orientar estratégias para equipes e jogadores no presente.
 
@@ -201,7 +199,11 @@ STL/TOV & Taxa de roubos de bola para turnovers (Steal-to-Turnover ratio) \\
 
 Verificou-se que existem alguns valores vazios, o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset possuem esse tipo de dado.
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/1.png}
+\caption{Avaliação de vazios pré-tratamento}
+\end{figure}
 
 O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG \%, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.
 
@@ -209,7 +211,11 @@ Para manter a consistência e garantir a confiabilidade da análise, optou-se po
 
 Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/2.png}
+\caption{Avaliação de vazios pós-tratamento}
+\end{figure}
 
 \hypertarget{o-que-define-um-jogador-bom}{%
 \chapter{O que define um jogador bom?}\label{o-que-define-um-jogador-bom}}
@@ -218,13 +224,25 @@ Para simplificação, será utilizado o rank apresentado no dataset, que represe
 
 Para definir o número ideal de componentes, avaliou-se a variância explicada por cada componente e utilizou-se a regra do cotovelo. Observando o gráfico abaixo, pode-se notar que a partir da segunda componente, quase toda a variância é explicada. Portanto, duas componentes são suficientes para descrever os dados, além de facilitar a interpretação visual dos mesmos.
 
-\includegraphics[width=0.9\textwidth,height=\textheight]{imagens/3.png}
-
 Na primeira análise do PCA, é possível observar que as variáveis são capazes de separar os jogadores com melhor ranking. Além disso, o ranking pode seguir três caminhos distintos, todos com a variável ``eficiência'' como a principal, mas com um foco maior em cestas de dois pontos, outro em cestas de três pontos, e por fim, um focado em rebotes e bloqueios. Esse último é especialmente relevante para jogadores nas posições de pivô e ala-pivô. Além disso, nota-se a presença de muitas variáveis correlacionadas. Para análises futuras, serão removidas as variáveis com maior correlação e menor peso no PCA.
 
-\includegraphics[width=0.9\textwidth,height=\textheight]{imagens/4.png}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth,height=\textheight]{imagens/3.png}
+\caption{Scree plot de variâncias explicadas por autovalores PCA}
+\end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth,height=\textheight]{imagens/4.png}
+\caption{Impacto componentes PCAs na dispersão dos melhores ranqueados na NBA}
+\end{figure}
+
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/5.png}
+\caption{Mapa de calor de correlações de pearson}
+\end{figure}
 
 A matriz de correlação gerada apresenta os coeficientes de correlação entre diferentes variáveis. Os valores na matriz variam de -1 a 1 e indicam a força e direção do relacionamento entre as variáveis.
 
@@ -239,7 +257,11 @@ Aqui estão algumas observações com base na matriz de correlação:
   Há uma correlação positiva forte entre ``Points Scored'' e várias outras variáveis, como ``FG Made'', ``FT Made'' e ``Minutes Played''. Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e jogar por mais minutos.
 \end{itemize}
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/6.png}
+\caption{Impacto componentes PCAs na dispersão dos melhores ranqueados na NBA, sem variáveis correlacionadas}
+\end{figure}
 
 Para corroborar com a avaliação do PCA foi utilizada uma outra técnica a fim de verificar o poder de separação dos atributos da base, as Curvas de Andrews. Elas são úteis porque permitem identificar quais variáveis têm um maior impacto na separação dos grupos, ajudando a entender a importância relativa de cada característica. Além disso, elas também podem ser usadas para detectar a presença de outliers ou padrões incomuns nos dados.
 
@@ -261,7 +283,11 @@ A interpretação das Curvas de Andrews é baseada na análise da forma das curv
 
 Quando é observada a curva, é possível notar que as variáveis selecionadas no PCA apresentam uma boa separação entre os grupos top 20,top 21-70, 71-150 e maior que 150, indicando que esses atributos separam bem não somente os melhores jogadores, como destacados no PCA, mas também entre jogadores menos bem ranqueados.
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/7.png}
+\caption{Curvas de Andrews para principais variáveis para determinação de Rank NBA}
+\end{figure}
 
 Por fim, a última avaliação dos jogadores foi realizada utilizando a técnica Radviz. Essa técnica é utilizada para visualizar dados multivariados. Consiste em um gráfico circular no qual os pontos de dados são dispostos ao redor de um círculo, sendo a posição de cada ponto determinada pelas suas variáveis. Cada variável é representada por um eixo radial, e a localização do ponto no gráfico indica a contribuição relativa de cada variável para o ponto de dados. Dessa forma, o Radviz permite identificar padrões e relacionamentos entre as variáveis de maneira intuitiva e compacta.
 
@@ -271,7 +297,11 @@ Ao observar os top 20 jogadores, é possível notar que eles estão mais concent
 
 Em resumo, de acordo com o Radviz, pode-se concluir que para ser considerado um bom jogador na NBA, não basta ser o principal pontuador, mas é necessário se destacar de maneira considerável em outros aspectos, como defesa, rebotes, variedade de arremessos e assistências.
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/40.png}
+\caption{Entendendo impacto das variáveis com RadViz}
+\end{figure}
 
 \hypertarget{evoluuxe7uxe3o-do-jogo-ao-longo-do-tempo.}{%
 \chapter{Evolução do jogo ao longo do tempo.}\label{evoluuxe7uxe3o-do-jogo-ao-longo-do-tempo.}}
@@ -293,7 +323,11 @@ Um exemplo disso é Stephen Curry, que é conhecido por seus arremessos de três
 
 Essas observações mostram que a consistência e o desempenho equilibrado em várias estatísticas são características importantes para os jogadores de destaque na NBA.
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/14.png}
+\caption{Evolução das características do jogo com RadViz}
+\end{figure}
 
 \hypertarget{entendimento-das-principais-estatuxedsticas-do-jogo}{%
 \chapter{Entendimento das principais estatísticas do jogo}\label{entendimento-das-principais-estatuxedsticas-do-jogo}}
@@ -304,15 +338,35 @@ Além disso, é possível interpretar a forma como essas curvas de distribuiçã
 
 Por fim, os atributos relacionados aos percentuais de acerto de arremessos de três pontos ou lances livres se assemelham a uma distribuição normal. Isso indica a característica do percentual de acerto de cada jogador. É importante destacar que a média de acertos em arremessos de três pontos é em torno de 35\%, enquanto nos lances livres é de 80\%. Isso evidencia a maior dificuldade de acerto em arremessos de três pontos. Essas observações nos ajudam a compreender melhor como os jogadores se destacam em diferentes aspectos do jogo e como as estatísticas se distribuem entre eles.
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/15.png}
+\caption{Distribuição das principais variáveis NBA}
+\end{figure}
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/16.png}
+\caption{Top 10 jogadores com mais Pontos Marcados}
+\end{figure}
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/17.png}
+\caption{Top 10 jogadores com mais Assistências}
+\end{figure}
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/18.png}
+\caption{Top 10 jogadores com mais bloqueios}
+\end{figure}
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/19.png}
+\caption{Top 10 jogadores com mais arremessos de 3 pontos}
+\end{figure}
 
 \hypertarget{inspirauxe7uxe3o-para-novas-anuxe1lises}{%
 \chapter{Inspiração para novas análises}\label{inspirauxe7uxe3o-para-novas-anuxe1lises}}
@@ -329,11 +383,23 @@ Além disso, a análise também aponta para situações em que times com o mesmo
 
 Em suma, a análise das características dos jogadores em diferentes equipes utilizando as faces de Chernoff é uma ferramenta útil para identificar padrões e tendências nos desempenhos das equipes. No entanto, é importante ressaltar que o basquete é um esporte complexo, influenciado por diversos fatores, e que apenas a análise visual não é suficiente para compreender completamente as dinâmicas e resultados das partidas.
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/20.png}
+\caption{Chernoff faces para temporada de 2022 regular (entendendo o estilo de jogo de diferentes times)}
+\end{figure}
 
+\begin{figure}
+\centering
 \includegraphics[width=0.8\textwidth,height=\textheight]{imagens/21.jpeg}
+\caption{Tabela da temporada regular de 2022 (conferência oeste)}
+\end{figure}
 
+\begin{figure}
+\centering
 \includegraphics[width=0.8\textwidth,height=\textheight]{imagens/22.jpeg}
+\caption{Tabela da temporada regular de 2022 (Conferência Leste)}
+\end{figure}
 
 Ao analisar os Warriors (GSW) ao longo de 13 anos usando as faces de Chernoff, é possível notar algumas tendências interessantes e reveladoras.
 
@@ -375,7 +441,11 @@ Nesse contexto, os gráficos das faces de Chernoff, assim como outras ferramenta
 
 2022 - 4º
 
+\begin{figure}
+\centering
 \includegraphics[width=0.9\textwidth,height=\textheight]{imagens/23.png}
+\caption{Chernoff Faces do Golden State Warriors ao longo dos anos, mudança do~estilo~de~jogo}
+\end{figure}
 
   \bibliography{book.bib,packages.bib}
 

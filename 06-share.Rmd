@@ -12,11 +12,11 @@ Além disso, a análise também aponta para situações em que times com o mesmo
 
 Em suma, a análise das características dos jogadores em diferentes equipes utilizando as faces de Chernoff é uma ferramenta útil para identificar padrões e tendências nos desempenhos das equipes. No entanto, é importante ressaltar que o basquete é um esporte complexo, influenciado por diversos fatores, e que apenas a análise visual não é suficiente para compreender completamente as dinâmicas e resultados das partidas.
 
-![](imagens/20.png){width="90%"}
+![Chernoff faces para temporada de 2022 regular (entendendo o estilo de jogo de diferentes times)](imagens/20.png){width="90%"}
 
-![](imagens/21.jpeg){width="80%"}
+![Tabela da temporada regular de 2022 (conferência oeste)](imagens/21.jpeg){width="80%"}
 
-![](imagens/22.jpeg){width="80%"}
+![Tabela da temporada regular de 2022 (Conferência Leste)](imagens/22.jpeg){width="80%"}
 
 Ao analisar os Warriors (GSW) ao longo de 13 anos usando as faces de Chernoff, é possível notar algumas tendências interessantes e reveladoras.
 
@@ -58,4 +58,4 @@ Nesse contexto, os gráficos das faces de Chernoff, assim como outras ferramenta
 
 2022 - 4º
 
-![](imagens/23.png){width="90%"}
+![Chernoff Faces do Golden State Warriors ao longo dos anos, mudança do estilo de jogo](imagens/23.png){width="90%"}

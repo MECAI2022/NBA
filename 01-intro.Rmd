@@ -6,10 +6,7 @@ Neste trabalho de Visualização de Dados, explora-se um conjunto abrangente de 
 
 O objetivo desta análise é investigar diversas facetas do basquete profissional, desde o desempenho das equipes até as estatísticas individuais dos jogadores. Por meio de técnicas de análise de dados e visualização, busca-se responder a perguntas como:
 
-Quais equipes dominaram a NBA ao longo dos anos?
-Quais jogadores tiveram as melhores performances estatísticas em diferentes épocas?
-Existem tendências ou padrões significativos nas estatísticas da NBA ao longo das décadas?
-Como o jogo evoluiu em termos de estilo de jogo, pontuação média e estilos de arremesso?
+Quais equipes dominaram a NBA ao longo dos anos? Quais jogadores tiveram as melhores performances estatísticas em diferentes épocas? Existem tendências ou padrões significativos nas estatísticas da NBA ao longo das décadas? Como o jogo evoluiu em termos de estilo de jogo, pontuação média e estilos de arremesso?
 
 Ao responder a essas perguntas, espera-se obter uma compreensão mais profunda da evolução da NBA e das dinâmicas que impulsionam o sucesso das equipes e dos jogadores ao longo do tempo. Esses insights não apenas fornecerão informações interessantes sobre a história da liga, mas também poderão ajudar a prever tendências futuras e orientar estratégias para equipes e jogadores no presente.
 

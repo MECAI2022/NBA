@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Tratamento dos Dados | 3 Pontos Sobre NBA</title>
+  <title>Capítulo 3 Tratamento dos Dados | 3 Pontos Sobre NBA</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Tratamento dos Dados | 3 Pontos Sobre NBA" />
+  <meta property="og:title" content="Capítulo 3 Tratamento dos Dados | 3 Pontos Sobre NBA" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Tratamento dos Dados | 3 Pontos Sobre NBA" />
+  <meta name="twitter:title" content="Capítulo 3 Tratamento dos Dados | 3 Pontos Sobre NBA" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -118,13 +118,19 @@ set in the _output.yml file.</p>" />
 
             <section class="normal" id="section-">
 <div id="tratamento-dos-dados" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Tratamento dos Dados<a href="tratamento-dos-dados.html#tratamento-dos-dados" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Capítulo 3</span> Tratamento dos Dados<a href="tratamento-dos-dados.html#tratamento-dos-dados" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Verificou-se que existem alguns valores vazios, o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset possuem esse tipo de dado.</p>
-<p><img src="imagens/1.png" style="width:90.0%" /></p>
+<div class="figure">
+<img src="imagens/1.png" style="width:90.0%" alt="" />
+<p class="caption">Avaliação de vazios pré-tratamento</p>
+</div>
 <p>O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG %, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.</p>
 <p>Para manter a consistência e garantir a confiabilidade da análise, optou-se por filtrar o DataFrame, excluindo as temporadas anteriores a 1978. Dessa forma, as colunas mencionadas estarão preenchidas a partir desse ano, permitindo uma análise mais completa e precisa das estatísticas dos jogadores da NBA.</p>
 <p>Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.</p>
-<p><img src="imagens/2.png" style="width:90.0%" /></p>
+<div class="figure">
+<img src="imagens/2.png" style="width:90.0%" alt="" />
+<p class="caption">Avaliação de vazios pós-tratamento</p>
+</div>
 
 </div>
             </section>
