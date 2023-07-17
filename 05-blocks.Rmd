@@ -6,20 +6,20 @@ Além disso, é possível interpretar a forma como essas curvas de distribuiçã
 
 Por fim, os atributos relacionados aos percentuais de acerto de arremessos de três pontos ou lances livres se assemelham a uma distribuição normal. Isso indica a característica do percentual de acerto de cada jogador. É importante destacar que a média de acertos em arremessos de três pontos é em torno de 35%, enquanto nos lances livres é de 80%. Isso evidencia a maior dificuldade de acerto em arremessos de três pontos. Essas observações nos ajudam a compreender melhor como os jogadores se destacam em diferentes aspectos do jogo e como as estatísticas se distribuem entre eles.
 
-![](imagens/15.png){width="50%"}
+![](imagens/15.png){width="90%"}
 
 **Principais pontuadores de todos os tempos**
 
-![](imagens/16.png){width="50%"}
+![](imagens/16.png){width="90%"}
 
 **Principais "garçons" de todos os tempos**
 
-![](imagens/17.png){width="50%"}
+![](imagens/17.png){width="90%"}
 
 **Principais bloqueadores de todos os tempos**
 
-![](imagens/18.png){width="50%"}
+![](imagens/18.png){width="90%"}
 
 **Principais pontuadores dos três de todos os tempos**
 
-![](imagens/19.png){width="50%"}
+![](imagens/19.png){width="90%"}

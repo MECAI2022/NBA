@@ -4,11 +4,13 @@ Para simplificação, será utilizado o rank apresentado no dataset, que represe
 
 Para definir o número ideal de componentes, avaliou-se a variância explicada por cada componente e utilizou-se a regra do cotovelo. Observando o gráfico abaixo, pode-se notar que a partir da segunda componente, quase toda a variância é explicada. Portanto, duas componentes são suficientes para descrever os dados, além de facilitar a interpretação visual dos mesmos.
 
-![](imagens/3.png){width="361"} Na primeira análise do PCA, é possível observar que as variáveis são capazes de separar os jogadores com melhor ranking. Além disso, o ranking pode seguir três caminhos distintos, todos com a variável "eficiência" como a principal, mas com um foco maior em cestas de dois pontos, outro em cestas de três pontos, e por fim, um focado em rebotes e bloqueios. Esse último é especialmente relevante para jogadores nas posições de pivô e ala-pivô. Além disso, nota-se a presença de muitas variáveis correlacionadas. Para análises futuras, serão removidas as variáveis com maior correlação e menor peso no PCA.
+![](imagens/3.png){width="90%"}
 
-![](imagens/4.png){width="488"}
+Na primeira análise do PCA, é possível observar que as variáveis são capazes de separar os jogadores com melhor ranking. Além disso, o ranking pode seguir três caminhos distintos, todos com a variável "eficiência" como a principal, mas com um foco maior em cestas de dois pontos, outro em cestas de três pontos, e por fim, um focado em rebotes e bloqueios. Esse último é especialmente relevante para jogadores nas posições de pivô e ala-pivô. Além disso, nota-se a presença de muitas variáveis correlacionadas. Para análises futuras, serão removidas as variáveis com maior correlação e menor peso no PCA.
 
-![](imagens/5.png){width="483"}
+![](imagens/4.png){width="90%"}
+
+![](imagens/5.png){width="90%"}
 
 A matriz de correlação gerada apresenta os coeficientes de correlação entre diferentes variáveis. Os valores na matriz variam de -1 a 1 e indicam a força e direção do relacionamento entre as variáveis.
 
@@ -20,7 +22,7 @@ Aqui estão algumas observações com base na matriz de correlação:
 
 -   Há uma correlação positiva forte entre "Points Scored" e várias outras variáveis, como "FG Made", "FT Made" e "Minutes Played". Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e jogar por mais minutos.
 
-![](imagens/6.png){width="50%"}
+![](imagens/6.png){width="90%"}
 
 Para corroborar com a avaliação do PCA foi utilizada uma outra técnica a fim de verificar o poder de separação dos atributos da base, as Curvas de Andrews. Elas são úteis porque permitem identificar quais variáveis têm um maior impacto na separação dos grupos, ajudando a entender a importância relativa de cada característica. Além disso, elas também podem ser usadas para detectar a presença de outliers ou padrões incomuns nos dados.
 
@@ -42,7 +44,7 @@ A interpretação das Curvas de Andrews é baseada na análise da forma das curv
 
 Quando é observada a curva, é possível notar que as variáveis selecionadas no PCA apresentam uma boa separação entre os grupos top 20,top 21-70, 71-150 e maior que 150, indicando que esses atributos separam bem não somente os melhores jogadores, como destacados no PCA, mas também entre jogadores menos bem ranqueados.
 
-![](imagens/7.png){width="50%"}
+![](imagens/7.png){width="90%"}
 
 Por fim, a última avaliação dos jogadores foi realizada utilizando a técnica Radviz. Essa técnica é utilizada para visualizar dados multivariados. Consiste em um gráfico circular no qual os pontos de dados são dispostos ao redor de um círculo, sendo a posição de cada ponto determinada pelas suas variáveis. Cada variável é representada por um eixo radial, e a localização do ponto no gráfico indica a contribuição relativa de cada variável para o ponto de dados. Dessa forma, o Radviz permite identificar padrões e relacionamentos entre as variáveis de maneira intuitiva e compacta.
 
@@ -52,7 +54,7 @@ Ao observar os top 20 jogadores, é possível notar que eles estão mais concent
 
 Em resumo, de acordo com o Radviz, pode-se concluir que para ser considerado um bom jogador na NBA, não basta ser o principal pontuador, mas é necessário se destacar de maneira considerável em outros aspectos, como defesa, rebotes, variedade de arremessos e assistências.
 
-![](imagens/40.png){width="50%"}
+![](imagens/40.png){width="90%"}
 
 # Evolução do jogo ao longo do tempo.
 
@@ -70,4 +72,4 @@ Um exemplo disso é Stephen Curry, que é conhecido por seus arremessos de três
 
 Essas observações mostram que a consistência e o desempenho equilibrado em várias estatísticas são características importantes para os jogadores de destaque na NBA.
 
-![](imagens/14.png){width="50%"}
+![](imagens/14.png){width="90%"}

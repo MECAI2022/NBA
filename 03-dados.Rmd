@@ -2,7 +2,7 @@
 
 Verificou-se que existem alguns valores vazios, o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset possuem esse tipo de dado.
 
-![](imagens/1.png){width="50%"}
+![](imagens/1.png){width="90%"}
 
 O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG %, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.
 
@@ -10,4 +10,4 @@ Para manter a consistência e garantir a confiabilidade da análise, optou-se po
 
 Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.
 
-![](imagens/2.png){width="50%"}
+![](imagens/2.png){width="90%"}
