@@ -152,8 +152,8 @@ As colunas são descritas a seguir:
 POR JOGADOR:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1806}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8194}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0935}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9065}}@{}}
 \toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
 Variável
@@ -201,7 +201,7 @@ STL/TOV & Taxa de roubos de bola para turnovers (Steal-to-Turnover ratio) \\
 
 Verificou-se que existem alguns valores vazios, o que é um problema para as análises que serão feitas. Vamos conferir quantas linhas do dataset possuem esse tipo de dado.
 
-\includegraphics{imagens/1.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/1.png}
 
 O DataFrame apresenta valores nulos em algumas colunas, como 3-Pt FG Made, 3-Pt FG Attempts, 3-Pt FG \%, Offensive Rebounds, Defensive Rebounds, Steals, Blocks, Turnovers, AST/TOV e STL/TOV. Esses valores nulos podem indicar a ausência de dados ou informações faltantes para algumas estatísticas específicas dos jogadores em determinadas temporadas.
 
@@ -209,30 +209,24 @@ Para manter a consistência e garantir a confiabilidade da análise, optou-se po
 
 Essa decisão foi tomada para evitar distorções nos resultados devido à ausência de dados em períodos anteriores, garantindo que a análise seja baseada em informações mais completas e recentes.
 
-\includegraphics{imagens/2.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/2.png}
 
 \hypertarget{o-que-define-um-jogador-bom}{%
 \chapter{O que define um jogador bom?}\label{o-que-define-um-jogador-bom}}
 
-Para simplificação, será utilizado o rank apresentado no dataset, que representa a ordenação dos jogadores de acordo com a pontuação por temporada.
-
-Apesar desse rank não levar em consideração fatores defensivos, será feita uma avaliação para verificar se os maiores ``cestinhas'' também apresentam características defensivas acima da média.
-
+Para simplificação, será utilizado o rank apresentado no dataset, que representa a ordenação dos jogadores de acordo com a pontuação por temporada. Apesar desse rank não levar em consideração fatores defensivos, será feita uma avaliação para verificar se os maiores ``cestinhas'' também apresentam características defensivas acima da média.
 Em um primeiro momento, será avaliado como as informações estatísticas de cada jogador por temporada variam e como estão relacionadas com o rank. Para isso, será utilizada a técnica do PCA para entender melhor esse comportamento.
 
 Para definir o número ideal de componentes, avaliou-se a variância explicada por cada componente e utilizou-se a regra do cotovelo.
-
 Observando o gráfico abaixo, pode-se notar que a partir da segunda componente, quase toda a variância é explicada. Portanto, duas componentes são suficientes para descrever os dados, além de facilitar a interpretação visual dos mesmos.
 
-\includegraphics{imagens/3.png}
-
+\includegraphics[width=3.76042in,height=\textheight]{imagens/3.png}
 Na primeira análise do PCA, é possível observar que as variáveis são capazes de separar os jogadores com melhor ranking. Além disso, o ranking pode seguir três caminhos distintos, todos com a variável ``eficiência'' como a principal, mas com um foco maior em cestas de dois pontos, outro em cestas de três pontos, e por fim, um focado em rebotes e bloqueios. Esse último é especialmente relevante para jogadores nas posições de pivô e ala-pivô.
-
 Além disso, nota-se a presença de muitas variáveis correlacionadas. Para análises futuras, serão removidas as variáveis com maior correlação e menor peso no PCA.
 
-\includegraphics{imagens/4.png}
+\includegraphics[width=5.08333in,height=\textheight]{imagens/4.png}
 
-\includegraphics{imagens/5.png}
+\includegraphics[width=5.03125in,height=\textheight]{imagens/5.png}
 
 A matriz de correlação gerada apresenta os coeficientes de correlação entre diferentes variáveis. Os valores na matriz variam de -1 a 1 e indicam a força e direção do relacionamento entre as variáveis.
 
@@ -247,17 +241,7 @@ Aqui estão algumas observações com base na matriz de correlação:
   Há uma correlação positiva forte entre ``Points Scored'' e várias outras variáveis, como ``FG Made'', ``FT Made'' e ``Minutes Played''. Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e jogar por mais minutos.
 \end{itemize}
 
-Após a redução da dimensionalidade, é possível observar que as estatísticas ainda apresentam uma separação razoável na determinação do ranking dos jogadores. Além disso, os jogadores com os maiores rankings estão bem distantes do centróide.
-
-Na figura abaixo, é destacado os cinco melhores jogadores de cada temporada, além de apresentar um exemplo para três jogadores: LeBron James, Shaquille O'Neal e~Stephen~Curry.
-
-É interessante notar que, na avaliação desses três jogadores, Curry se destaca pelas cestas de três pontos, O'Neal pela presença no garrafão, com um elevado número de rebotes, e LeBron com uma das maiores eficiências já vistas na história da NBA.
-
-Em resumo, para se definir um jogador bom, é necessário ter uma maior eficiência de maneira geral, sendo que essa eficiência pode variar de acordo com a posição e características dos jogadores. Por exemplo, um armador como Curry tem facilidade em fazer cestas de três pontos, enquanto um ala-pivô como LeBron possui características mais equilibradas e O'Neal, como pivô, se destaca pela presença no garrafão.
-
-Por fim, mesmo que o ranking utilizado seja baseado na pontuação, nota-se que os jogadores mais bem ranqueados não se destacam apenas por essa característica.
-
-\includegraphics{imagens/6.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/6.png}
 
 Para corroborar com a avaliação do PCA foi utilizada uma outra técnica a fim de verificar o poder de separação dos atributos da base, as Curvas de Andrews. Elas são úteis porque permitem identificar quais variáveis têm um maior impacto na separação dos grupos, ajudando a entender a importância relativa de cada característica. Além disso, elas também podem ser usadas para detectar a presença de outliers ou padrões incomuns nos dados.
 
@@ -279,7 +263,7 @@ A interpretação das Curvas de Andrews é baseada na análise da forma das curv
 
 Quando é observada a curva, é possível notar que as variáveis selecionadas no PCA apresentam uma boa separação entre os grupos top 20,top 21-70, 71-150 e maior que 150, indicando que esses atributos separam bem não somente os melhores jogadores, como destacados no PCA, mas também entre jogadores menos bem ranqueados.
 
-\includegraphics{imagens/7.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/7.png}
 
 Por fim, a última avaliação dos jogadores foi realizada utilizando a técnica Radviz. Essa técnica é utilizada para visualizar dados multivariados. Consiste em um gráfico circular no qual os pontos de dados são dispostos ao redor de um círculo, sendo a posição de cada ponto determinada pelas suas variáveis. Cada variável é representada por um eixo radial, e a localização do ponto no gráfico indica a contribuição relativa de cada variável para o ponto de dados. Dessa forma, o Radviz permite identificar padrões e relacionamentos entre as variáveis de maneira intuitiva e compacta.
 
@@ -289,7 +273,7 @@ Ao observar os top 20 jogadores, é possível notar que eles estão mais concent
 
 Em resumo, de acordo com o Radviz, pode-se concluir que para ser considerado um bom jogador na NBA, não basta ser o principal pontuador, mas é necessário se destacar de maneira considerável em outros aspectos, como defesa, rebotes, variedade de arremessos e assistências.
 
-\includegraphics{imagens/40.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/40.png}
 
 \hypertarget{evoluuxe7uxe3o-do-jogo-ao-longo-do-tempo.}{%
 \chapter{Evolução do jogo ao longo do tempo.}\label{evoluuxe7uxe3o-do-jogo-ao-longo-do-tempo.}}
@@ -311,7 +295,7 @@ Um exemplo disso é Stephen Curry, que é conhecido por seus arremessos de três
 
 Essas observações mostram que a consistência e o desempenho equilibrado em várias estatísticas são características importantes para os jogadores de destaque na NBA.
 
-\includegraphics{imagens/14.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/14.png}
 
 \hypertarget{entendimento-das-principais-estatuxedsticas-do-jogo}{%
 \chapter{Entendimento das principais estatísticas do jogo}\label{entendimento-das-principais-estatuxedsticas-do-jogo}}
@@ -320,26 +304,25 @@ Uma maneira simples de entender melhor como funciona um jogo de basquete e como 
 
 Além disso, é possível interpretar a forma como essas curvas de distribuição decrescem. Ao comparar os arremessos de três pontos com os arremessos de dois pontos, a curva dos arremessos de três apresenta uma queda mais acentuada. Isso indica que esse é um atributo com menor frequência (ou maior dificuldade). A mesma analogia pode ser aplicada aos rebotes ofensivos e defensivos, sendo que os rebotes ofensivos são muito menos frequentes.
 
-Por fim, os atributos relacionados aos percentuais de acerto de arremessos de três pontos ou lances livres se assemelham a uma distribuição normal. Isso indica a característica do percentual de acerto de cada jogador. É importante destacar que a média de acertos em arremessos de três pontos é em torno de 35\%, enquanto nos lances livres é de 80\%. Isso evidencia a maior dificuldade de acerto em arremessos de três pontos.
-Essas observações nos ajudam a compreender melhor como os jogadores se destacam em diferentes aspectos do jogo e como as estatísticas se distribuem entre eles.
+Por fim, os atributos relacionados aos percentuais de acerto de arremessos de três pontos ou lances livres se assemelham a uma distribuição normal. Isso indica a característica do percentual de acerto de cada jogador. É importante destacar que a média de acertos em arremessos de três pontos é em torno de 35\%, enquanto nos lances livres é de 80\%. Isso evidencia a maior dificuldade de acerto em arremessos de três pontos. Essas observações nos ajudam a compreender melhor como os jogadores se destacam em diferentes aspectos do jogo e como as estatísticas se distribuem entre eles.
 
-\includegraphics{imagens/15.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/15.png}
 
 \textbf{Principais pontuadores de todos os tempos}
 
-\includegraphics{imagens/16.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/16.png}
 
 \textbf{Principais ``garçons'' de todos os tempos}
 
-\includegraphics{imagens/17.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/17.png}
 
 \textbf{Principais bloqueadores de todos os tempos}
 
-\includegraphics{imagens/18.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/18.png}
 
 \textbf{Principais pontuadores dos três de todos os tempos}
 
-\includegraphics{imagens/19.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{imagens/19.png}
 
 \hypertarget{inspirauxe7uxe3o-para-novas-anuxe1lises}{%
 \chapter{Inspiração para novas análises}\label{inspirauxe7uxe3o-para-novas-anuxe1lises}}
@@ -356,11 +339,11 @@ Além disso, a análise também aponta para situações em que times com o mesmo
 
 Em suma, a análise das características dos jogadores em diferentes equipes utilizando as faces de Chernoff é uma ferramenta útil para identificar padrões e tendências nos desempenhos das equipes. No entanto, é importante ressaltar que o basquete é um esporte complexo, influenciado por diversos fatores, e que apenas a análise visual não é suficiente para compreender completamente as dinâmicas e resultados das partidas.
 
-\includegraphics{imagens/20.png}
+\includegraphics[width=4.44792in,height=\textheight]{imagens/20.png}
 
-\includegraphics{imagens/21.jpeg}
+\includegraphics[width=5.91667in,height=\textheight]{imagens/21.jpeg}
 
-\includegraphics{imagens/22.jpeg}
+\includegraphics[width=5.79167in,height=\textheight]{imagens/22.jpeg}
 
 Ao analisar os Warriors (GSW) ao longo de 13 anos usando as faces de Chernoff, é possível notar algumas tendências interessantes e reveladoras.
 
@@ -402,7 +385,7 @@ Nesse contexto, os gráficos das faces de Chernoff, assim como outras ferramenta
 
 2022 - 4º
 
-\includegraphics{imagens/23.png}
+\includegraphics[width=4.03125in,height=\textheight]{imagens/23.png}
 
   \bibliography{book.bib,packages.bib}
 

@@ -4,23 +4,22 @@ Uma maneira simples de entender melhor como funciona um jogo de basquete e como 
 
 Além disso, é possível interpretar a forma como essas curvas de distribuição decrescem. Ao comparar os arremessos de três pontos com os arremessos de dois pontos, a curva dos arremessos de três apresenta uma queda mais acentuada. Isso indica que esse é um atributo com menor frequência (ou maior dificuldade). A mesma analogia pode ser aplicada aos rebotes ofensivos e defensivos, sendo que os rebotes ofensivos são muito menos frequentes.
 
-Por fim, os atributos relacionados aos percentuais de acerto de arremessos de três pontos ou lances livres se assemelham a uma distribuição normal. Isso indica a característica do percentual de acerto de cada jogador. É importante destacar que a média de acertos em arremessos de três pontos é em torno de 35%, enquanto nos lances livres é de 80%. Isso evidencia a maior dificuldade de acerto em arremessos de três pontos.
-Essas observações nos ajudam a compreender melhor como os jogadores se destacam em diferentes aspectos do jogo e como as estatísticas se distribuem entre eles.
+Por fim, os atributos relacionados aos percentuais de acerto de arremessos de três pontos ou lances livres se assemelham a uma distribuição normal. Isso indica a característica do percentual de acerto de cada jogador. É importante destacar que a média de acertos em arremessos de três pontos é em torno de 35%, enquanto nos lances livres é de 80%. Isso evidencia a maior dificuldade de acerto em arremessos de três pontos. Essas observações nos ajudam a compreender melhor como os jogadores se destacam em diferentes aspectos do jogo e como as estatísticas se distribuem entre eles.
 
-![](imagens/15.png)
+![](imagens/15.png){width="50%"}
 
 **Principais pontuadores de todos os tempos**
 
-![](imagens/16.png)
+![](imagens/16.png){width="50%"}
 
 **Principais "garçons" de todos os tempos**
 
-![](imagens/17.png)
+![](imagens/17.png){width="50%"}
 
 **Principais bloqueadores de todos os tempos**
 
-![](imagens/18.png)
+![](imagens/18.png){width="50%"}
 
 **Principais pontuadores dos três de todos os tempos**
 
-![](imagens/19.png)
+![](imagens/19.png){width="50%"}
