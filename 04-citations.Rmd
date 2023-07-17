@@ -24,15 +24,15 @@ A matriz de correlação gerada apresenta os coeficientes de correlação entre 
 
 Aqui estão algumas observações com base na matriz de correlação:
 
-* Há uma correlação positiva forte entre "Games Played" e várias outras variáveis, como "Minutes Played", "FG Made", "FG Attempts", "FT Made" e "FT Attempts". Isso faz sentido, uma vez que jogadores que disputam mais partidas tendem a acumular mais minutos de jogo e ter mais tentativas e acertos em arremessos de quadra e lances livres.
+-   Há uma correlação positiva forte entre "Games Played" e várias outras variáveis, como "Minutes Played", "FG Made", "FG Attempts", "FT Made" e "FT Attempts". Isso faz sentido, uma vez que jogadores que disputam mais partidas tendem a acumular mais minutos de jogo e ter mais tentativas e acertos em arremessos de quadra e lances livres.
 
-* Existe uma correlação positiva forte entre "Offensive Rebounds" e "Defensive Rebounds", o que é esperado, já que ambos contribuem para o número total de rebotes.
+-   Existe uma correlação positiva forte entre "Offensive Rebounds" e "Defensive Rebounds", o que é esperado, já que ambos contribuem para o número total de rebotes.
 
-* Há uma correlação positiva forte entre "Points Scored" e várias outras variáveis, como "FG Made", "FT Made" e "Minutes Played". Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e jogar por mais minutos.
+-   Há uma correlação positiva forte entre "Points Scored" e várias outras variáveis, como "FG Made", "FT Made" e "Minutes Played". Isso indica que jogadores que marcam mais pontos também tendem a converter mais arremessos de quadra, lances livres e jogar por mais minutos.
 
 Após a redução da dimensionalidade, é possível observar que as estatísticas ainda apresentam uma separação razoável na determinação do ranking dos jogadores. Além disso, os jogadores com os maiores rankings estão bem distantes do centróide.
 
-Na figura abaixo, destacamos os cinco melhores jogadores de cada temporada, além de apresentar um exemplo para três jogadores: LeBron James, Shaquille O'Neal e Stephen Curry.
+Na figura abaixo, é destacado os cinco melhores jogadores de cada temporada, além de apresentar um exemplo para três jogadores: LeBron James, Shaquille O'Neal e Stephen Curry.
 
 É interessante notar que, na avaliação desses três jogadores, Curry se destaca pelas cestas de três pontos, O'Neal pela presença no garrafão, com um elevado número de rebotes, e LeBron com uma das maiores eficiências já vistas na história da NBA.
 
@@ -42,8 +42,7 @@ Por fim, mesmo que o ranking utilizado seja baseado na pontuação, nota-se que 
 
 ![](imagens/6.png)
 
-Para corroborar com a avaliação do PCA foi utilizada uma outra técnica a fim de verificar o poder de separação dos atributos da base, as Curvas de Andrews.
-Elas são úteis porque permitem identificar quais variáveis têm um maior impacto na separação dos grupos, ajudando a entender a importância relativa de cada característica. Além disso, elas também podem ser usadas para detectar a presença de outliers ou padrões incomuns nos dados.
+Para corroborar com a avaliação do PCA foi utilizada uma outra técnica a fim de verificar o poder de separação dos atributos da base, as Curvas de Andrews. Elas são úteis porque permitem identificar quais variáveis têm um maior impacto na separação dos grupos, ajudando a entender a importância relativa de cada característica. Além disso, elas também podem ser usadas para detectar a presença de outliers ou padrões incomuns nos dados.
 
 As Curvas de Andrews são construídas utilizando a série de Fourier para transformar as variáveis originais em uma combinação de funções seno e cosseno. A série de Fourier é uma representação matemática de uma função periódica como uma soma infinita de funções seno e cosseno com diferentes frequências.
 
@@ -73,17 +72,19 @@ Ao observar os top 20 jogadores, é possível notar que eles estão mais concent
 
 Em resumo, de acordo com o Radviz, pode-se concluir que para ser considerado um bom jogador na NBA, não basta ser o principal pontuador, mas é necessário se destacar de maneira considerável em outros aspectos, como defesa, rebotes, variedade de arremessos e assistências.
 
+![](imagens/40.png)
+
 # Evolução do jogo ao longo do tempo.
 
 Ao avaliar o Radviz aberto por ano e temporada (regular e playoffs), é possível chegar a algumas conclusões:
 
-* Na década de 80/90, os arremessos de três pontos eram menos frequentes, e isso pode ser observado pela menor variação nos dados relacionados a essas estatísticas. As âncoras 3-pt FG%, 3Pt FG Attempts e 3-pt FG Made não apresentam uma tendência clara. No entanto, nas décadas seguintes, há uma dispersão maior dos dados nessas âncoras, indicando uma maior importância e frequência dos arremessos de três pontos.
+-   Na década de 80/90, os arremessos de três pontos eram menos frequentes, e isso pode ser observado pela menor variação nos dados relacionados a essas estatísticas. As âncoras 3-pt FG%, 3Pt FG Attempts e 3-pt FG Made não apresentam uma tendência clara. No entanto, nas décadas seguintes, há uma dispersão maior dos dados nessas âncoras, indicando uma maior importância e frequência dos arremessos de três pontos.
 
-* Os dados são mais dispersos na temporada regular do que nos playoffs, tornando mais difícil uma separação clara entre os jogadores mais bem ranqueados, especialmente nos top 150.
+-   Os dados são mais dispersos na temporada regular do que nos playoffs, tornando mais difícil uma separação clara entre os jogadores mais bem ranqueados, especialmente nos top 150.
 
-* Nos playoffs, a dispersão dos dados é menor, permitindo uma melhor separação dos top 20 jogadores. É importante notar que alguns extremos podem ser encontrados entre os jogadores até o top 150, o que não ocorre na temporada regular.
+-   Nos playoffs, a dispersão dos dados é menor, permitindo uma melhor separação dos top 20 jogadores. É importante notar que alguns extremos podem ser encontrados entre os jogadores até o top 150, o que não ocorre na temporada regular.
 
-* Os top 20 jogadores da NBA, independentemente do ano ou da temporada, apresentam uma característica consistente: eles são constantes em todos os indicadores, sem apresentar extremos significativos.
+-   Os top 20 jogadores da NBA, independentemente do ano ou da temporada, apresentam uma característica consistente: eles são constantes em todos os indicadores, sem apresentar extremos significativos.
 
 Um exemplo disso é Stephen Curry, que é conhecido por seus arremessos de três pontos e sempre possui um alto ranking. No entanto, ele se mantém próximo ao centro no Radviz, indicando que ele também é bem avaliado em outros aspectos do jogo.
 
