@@ -1,4 +1,4 @@
-# Entendimento das principais estatística do jogo
+# Entendimento das principais estatísticas do jogo
 
 Ao avaliar o Radviz aberto por ano e temporada (regular e playoffs), é possível chegar a algumas conclusões:
 
