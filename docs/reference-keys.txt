@@ -6,5 +6,5 @@ tratamento-dos-dados
 o-que-define-um-jogador-bom
 evolução-do-jogo-ao-longo-dos-tempos-e-temporadas.
 entendimento-das-principais-estatística-do-jogo
-o-que-define-um-time-bom
+entendento-o-estilo-de-jogos-dos-times
 chernoff-faces

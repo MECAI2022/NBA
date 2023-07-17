@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Angelo Carmignani, Gabriel Bortoli, Wesley Maia" />
 
 
-<meta name="date" content="2023-07-13" />
+<meta name="date" content="2023-07-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -96,11 +96,10 @@ set in the _output.yml file.</p>" />
 <li class="chapter" data-level="4" data-path="o-que-define-um-jogador-bom.html"><a href="o-que-define-um-jogador-bom.html"><i class="fa fa-check"></i><b>4</b> O que define um jogador bom?</a></li>
 <li class="chapter" data-level="5" data-path="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html"><a href="evolução-do-jogo-ao-longo-dos-tempos-e-temporadas..html"><i class="fa fa-check"></i><b>5</b> Evolução do jogo ao longo dos tempos e temporadas.</a></li>
 <li class="chapter" data-level="6" data-path="entendimento-das-principais-estatística-do-jogo.html"><a href="entendimento-das-principais-estatística-do-jogo.html"><i class="fa fa-check"></i><b>6</b> Entendimento das principais estatística do jogo</a></li>
-<li class="chapter" data-level="7" data-path="o-que-define-um-time-bom.html"><a href="o-que-define-um-time-bom.html"><i class="fa fa-check"></i><b>7</b> O que define um time bom?</a>
+<li class="chapter" data-level="7" data-path="entendento-o-estilo-de-jogos-dos-times.html"><a href="entendento-o-estilo-de-jogos-dos-times.html"><i class="fa fa-check"></i><b>7</b> Entendento o Estilo de jogos dos times</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="o-que-define-um-time-bom.html"><a href="o-que-define-um-time-bom.html#chernoff-faces"><i class="fa fa-check"></i><b>7.1</b> Chernoff Faces</a></li>
+<li class="chapter" data-level="7.1" data-path="entendento-o-estilo-de-jogos-dos-times.html"><a href="entendento-o-estilo-de-jogos-dos-times.html#chernoff-faces"><i class="fa fa-check"></i><b>7.1</b> Chernoff Faces</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -124,16 +123,15 @@ set in the _output.yml file.</p>" />
 <div id="header">
 <h1 class="title">3 Pontos Sobre NBA</h1>
 <p class="author"><em>Angelo Carmignani, Gabriel Bortoli, Wesley Maia</em></p>
-<p class="date"><em>2023-07-13</em></p>
+<p class="date"><em>2023-07-17</em></p>
 </div>
 <div id="prefácio" class="section level1 unnumbered hasAnchor">
 <h1>Prefácio<a href="index.html#prefácio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>É com grande satisfação que apresento este trabalho de visualização de informação sobre dados da NBA, desenvolvido no âmbito da disciplina MAI5017 - Visualização de Informação, como parte integrante do Mestrado Profissional em Matemática, Estatística e Computação Aplicadas à Indústria (MECAI) do Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo.</p>
-<p>A visualização de dados desempenha um papel crucial na análise e compreensão de conjuntos complexos de informações. No contexto do esporte, em particular, a visualização de dados tem se mostrado uma ferramenta poderosa para explorar e comunicar insights valiosos a partir de estatísticas e padrões relacionados aos jogos e aos jogadores de basquete.</p>
-<p>Este trabalho tem como objetivo principal explorar os dados da NBA e utilizar técnicas de visualização para revelar informações significativas e interessantes sobre as partidas, os jogadores, as equipes e as tendências ao longo do tempo. Para tanto, foram utilizadas ferramentas e técnicas de programação em Python, um ambiente amplamente adotado no campo da ciência de dados e análise estatística.</p>
+<p>A visualização de dados desempenha um papel crucial na análise e compreensão de conjuntos complexos de informações. No contexto do esporte, em particular, a visualização de dados tem-se mostrado uma ferramenta poderosa para explorar e comunicar insights valiosos a partir de estatísticas e padrões relacionados aos jogos e aos jogadores de basquete.</p>
+<p>O objetivo principal deste trabalho é explorar os dados da NBA e utilizar técnicas de visualização para revelar informações significativas e interessantes sobre as partidas, os jogadores, as equipes e as tendências ao longo do tempo. Para tanto, foram utilizadas ferramentas e técnicas de programação em Python, um ambiente amplamente adotado no campo da ciência de dados e análise estatística.</p>
 <p>A abordagem adotada neste trabalho segue o formato bookdown, uma estrutura que permite combinar narrativa, código e gráficos interativos de maneira integrada e coesa. Dessa forma, os resultados obtidos são apresentados de maneira clara e acessível, facilitando a compreensão e a exploração dos dados pelos leitores.</p>
-<p>O estudo da visualização de informação aplicada à NBA não se restringe apenas ao interesse acadêmico, mas também possui um potencial significativo na indústria esportiva, na tomada de decisões estratégicas e no desenvolvimento de estratégias competitivas. Por meio da visualização eficaz de dados, é possível identificar padrões ocultos, analisar desempenhos individuais e coletivos, e extrair insights relevantes para apoiar a tomada de decisões informadas.</p>
-<p>Agradeço a todos os professores e colegas do MECAI pelo apoio e incentivo ao longo desta jornada de aprendizado. Espero que este trabalho contribua para o avanço do conhecimento na área de visualização de informação e inspire pesquisas futuras no campo da análise de dados esportivos.</p>
+<p>O estudo da visualização de informação aplicada à NBA não se restringe apenas ao interesse acadêmico, mas também possui um potencial significativo na indústria esportiva, na tomada de decisões estratégicas e no desenvolvimento de estratégias competitivas. Por meio da visualização eficaz de dados, é possível identificar padrões ocultos, analisar desempenhos individuais e coletivos e extrair insights relevantes para apoiar a tomada de decisões informadas.</p>
+<p>Os autores agradecem a todos os professores e colegas do MECAI pelo apoio e incentivo ao longo desta jornada de aprendizado. Espera-se que este trabalho contribua para o avanço do conhecimento na área de visualização de informação e inspire pesquisas futuras no campo da análise de dados esportivos.</p>
 </div>
             </section>
 
