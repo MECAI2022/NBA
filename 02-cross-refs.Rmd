@@ -9,7 +9,7 @@ As colunas são descritas a seguir:
 POR JOGADOR:
 
 | Variável           | Descrição                                                                                                                                                                                        |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------|-----------------------------------------------------------|
 | Rank               | A classificação do jogador (ordenado por pontos marcados a cada temporada)                                                                                                                       |
 | Year               | O ano da temporada (por exemplo, "2018-19")                                                                                                                                                      |
 | Season Start Year  | O ano de início da temporada (por exemplo, 2018)                                                                                                                                                 |

@@ -152,8 +152,8 @@ As colunas são descritas a seguir:
 POR JOGADOR:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0935}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9065}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1806}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8194}}@{}}
 \toprule()
 \begin{minipage}[b]{\linewidth}\raggedright
 Variável
@@ -316,22 +316,12 @@ Essas observações mostram que a consistência e o desempenho equilibrado em v�
 \hypertarget{entendimento-das-principais-estatuxedsticas-do-jogo}{%
 \chapter{Entendimento das principais estatísticas do jogo}\label{entendimento-das-principais-estatuxedsticas-do-jogo}}
 
-Ao avaliar o Radviz aberto por ano e temporada (regular e playoffs), é possível chegar a algumas conclusões:
+Uma maneira simples de entender melhor como funciona um jogo de basquete e como são os jogadores é avaliar as distribuições dos principais atributos. Quando os atributos estão relacionados a marcar mais pontos, fazer mais arremessos ou ter mais roubadas de bola, todos eles apresentam uma forma de distribuição exponencial. Isso indica que, à medida que a frequência desses atributos aumenta, uma quantidade menor de jogadores consegue atingir marcas mais altas.
 
-\begin{itemize}
-\item
-  Na década de 80/90, os arremessos de três pontos eram menos frequentes, e isso pode ser observado pela menor variação nos dados relacionados a essas estatísticas. As âncoras 3-pt FG\%, 3Pt FG Attempts e 3-pt FG Made não apresentam uma tendência clara. No entanto, nas décadas seguintes, há uma dispersão maior dos dados nessas âncoras, indicando uma maior importância e frequência dos arremessos de três pontos.
-\item
-  Os dados são mais dispersos na temporada regular do que nos playoffs, tornando mais difícil uma separação clara entre os jogadores mais bem ranqueados, especialmente nos top 150.
-\item
-  Nos playoffs, a dispersão dos dados é menor, permitindo uma melhor separação dos top 20 jogadores. É importante notar que alguns extremos podem ser encontrados entre os jogadores até o top 150, o que não ocorre na temporada regular.
-\item
-  Os top 20 jogadores da NBA, independentemente do ano ou da temporada, apresentam uma característica consistente: eles são constantes em todos os indicadores, sem apresentar extremos significativos.
-\end{itemize}
+Além disso, é possível interpretar a forma como essas curvas de distribuição decrescem. Ao comparar os arremessos de três pontos com os arremessos de dois pontos, a curva dos arremessos de três apresenta uma queda mais acentuada. Isso indica que esse é um atributo com menor frequência (ou maior dificuldade). A mesma analogia pode ser aplicada aos rebotes ofensivos e defensivos, sendo que os rebotes ofensivos são muito menos frequentes.
 
-Um exemplo disso é Stephen Curry, que é conhecido por seus arremessos de três pontos e sempre possui um alto ranking. No entanto, ele se mantém próximo ao centro no Radviz, indicando que ele também é bem avaliado em outros aspectos do jogo.
-
-Essas observações mostram que a consistência e o desempenho equilibrado em várias estatísticas são características importantes para os jogadores de destaque na NBA.
+Por fim, os atributos relacionados aos percentuais de acerto de arremessos de três pontos ou lances livres se assemelham a uma distribuição normal. Isso indica a característica do percentual de acerto de cada jogador. É importante destacar que a média de acertos em arremessos de três pontos é em torno de 35\%, enquanto nos lances livres é de 80\%. Isso evidencia a maior dificuldade de acerto em arremessos de três pontos.
+Essas observações nos ajudam a compreender melhor como os jogadores se destacam em diferentes aspectos do jogo e como as estatísticas se distribuem entre eles.
 
 \includegraphics{imagens/15.png}
 
